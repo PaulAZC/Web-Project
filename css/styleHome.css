@@ -69,6 +69,8 @@ section{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    color: white;
+    font-size: 1.8em;
 }
 
 section .discoverBtn{
@@ -90,5 +92,11 @@ section .discoverBtn:hover{
     transition: all 0.3s ease-in-out;
     background: white;
     color: #333;
+}
+
+section h1{
+    position: absolute;
+    left: 100px;
+    top: 200px;
 }
 
