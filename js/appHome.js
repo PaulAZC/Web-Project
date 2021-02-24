@@ -1,13 +1,18 @@
 const button = document.querySelectorAll('.discoverBtn');
 const textSection1 = document.getElementById('titleFirstSection');
+const load = document.querySelector('.load');
 
 window.addEventListener('load', () => {
+    load.classList.add('fondu-out');
+    
     new Typewriter(textSection1, {
     })
     .changeDelay(80)
     .typeString('Welcome to my site, ')
     .pauseFor(1000)
-    .typeString('that talk about <span style="color:red">that</span>')
+    .typeString('that talk about ')
+    .pauseFor(1000) 
+    .typeString('<span style="color:red">that</span>')
     .start();
 
     const TL = gsap.timeline({pause:true});
