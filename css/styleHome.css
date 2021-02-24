@@ -1,0 +1,94 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 200vh;
+}
+
+header{
+    font-family: 'Open sans', Arial, Helvetica, sans-serif;
+    width: 100%;
+    font: bold;
+    padding: 30px 30px 30px 30px;
+    background-color: black;
+    font-size: 1.2em;    
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li{
+    list-style: none;
+    padding-right: 20px;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font: bold;
+    position: relative;
+    letter-spacing: 0.10em;
+}
+
+header nav ul li a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+header nav ul li a:hover:after{
+    width: 100%; 
+    left: 0; 
+}
+
+section{
+    width: 100%;
+    height: 852px;
+    background: #333;
+    background: url(../images/building.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section .discoverBtn{
+    border: 2px solid white;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    position: absolute;
+    right: 540px;
+    top: 840px;
+}
+
+section .discoverBtn:hover{
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: #333;
+}
+
