@@ -1,10 +1,11 @@
-const button = document.querySelectorAll('.discoverBtn');
+const button = document.querySelector('.discoverBtn');
 const textSection1 = document.getElementById('titleFirstSection');
 const load = document.querySelector('.load');
+const cube = document.querySelector('.cube');
 
 window.addEventListener('load', () => {
     load.classList.add('fondu-out');
-    
+
     new Typewriter(textSection1, {
     })
     .changeDelay(80)
@@ -14,8 +15,14 @@ window.addEventListener('load', () => {
     .pauseFor(1000) 
     .typeString('<span style="color:red">that</span>')
     .start();
+});
 
-    const TL = gsap.timeline({pause:true});
-    TL.staggerFrom(button, 2, {opacity:0, ease:"power2.out"}, 0.3);
-    TL.play();
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY>70){
+        button.classList.add('anim-button');
+    }
+
+    if(window.scrollY>500){
+        cube.classList.add('anim-cube');
+    }
 });
