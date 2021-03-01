@@ -9,17 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="load">
-        <span class="letter">L</span>
-        <span class="letter">O</span>
-        <span class="letter">A</span>
-        <span class="letter">D</span>
-        <span class="letter">I</span>
-        <span class="letter">N</span>
-        <span class="letter">G</span>
+<body data-barba="wrapper">
+    <div class="cont-bandes">
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
     </div>
-        <header>
+    <div class="wipe-transition"></div>
+
+    <header>
         <nav>
                 <div id="navigation">
                     <ul>
@@ -37,25 +42,69 @@
                 </div>
         </nav>
     </header>
-    <section id="firstSection">
-            <h1 id="titleFirstSection">Lorem ipsum dolor sit.</h1>
-            <button class="discoverBtn">Discover</button>
-    </section>
-    <section id="secondSection">
-        <div class="cubeContainer">
-            <div class="cube">
-              <div class="face front"></div>
-              <div class="face back"></div>
-              <div class="face right"></div>
-              <div class="face left"></div>
-              <div class="face top"></div>
-              <div class="face bottom"></div>
+
+    <main data-barba="container" data-barba-namespace="home">
+        <section id="firstSection" class="section1">
+                <h1 id="titleFirstSection">Lorem ipsum dolor sit.</h1>
+                <button class="discoverBtn">Discover</button>
+        </section>
+        <section id="secondSection">
+            <div class="cubeContainer">
+                <div class="cube">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face right"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+                </div>
             </div>
-          </div>
-          <h1>Soy un cuadrado</h1>
-    </section>
+            <h1>Soy un cuadrado</h1>
+        </section>
+    </main>
+
+    <footer>
+        <div id="otherInformation">
+            <div id="ourServices" class="info">
+                <h1>Our Services</h1>
+                <ul class="serviceList">
+                    <li><a href="#">Web design</a></li>
+                    <li><a href="#">Cybersecurity</a></li>
+                    <li><a href="#">Audit</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Teaching</a></li>
+                </ul>
+            </div>
+            <div id="aboutUs" class="info">
+                <h1>About</h1>
+                <ul class="aboutList">
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div id="companyDescription" class="info">
+                <h1>Web Company</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Fugit vero autem eum sint magnam provident laudantium rerum tempora repudiandae debitis. 
+                    Animi, modi. Accusantium est obcaecati sequi autem doloremque ratione suscipit?
+                </p>
+            </div>
+        </div>
+        <div id="maListe">
+            <ul id="socialList" class="socialList">
+                <li class="toBulle"><a href="#"><img src="images/fb.svg" alt="facebook" class="media"></a></li>
+                <li class="toBulle"><a href="#"><img src="images/insta.svg" alt="insta" class="media"></a></li>
+                <li class="toBulle"><a href="#"><img src="images/yt.svg" alt="youtube" class="media"></a></li>
+                <li class="toBulle"><a href="#"><img src="images/github.svg" alt="github" class="media"></a></li>
+            </ul>
+        </div>
+        <h2 class="copyright">Web Compagny © 2021 </h2>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
     <script src="js/appHome.js"></script>
 </body>
 </html>
