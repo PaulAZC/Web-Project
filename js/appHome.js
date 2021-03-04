@@ -10,6 +10,9 @@ const textCoding = document.querySelector('.textCoding');
 const imgCoding = document.querySelector('.imgCoding');
 const textTeaching = document.querySelector('.textTeaching');
 const imgTeaching = document.querySelector('.imgTeaching');
+let header = document.querySelector('header');
+let fontHeader = document.querySelectorAll('header a');
+let fontHeaderHover = document.querySelectorAll('nav a:hover');
 
 // function delay(n) {
 //     return new Promise((done) => {
@@ -67,20 +70,36 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('scroll', ()=>{    
-    if(window.scrollY>50 && window.scrollY<665){
+    if(window.scrollY>38 && window.scrollY<570){
         button.classList.add('anim-button');
     }
-    if(window.scrollY>270 && window.scrollY<1175){
+    if(window.scrollY>200 && window.scrollY<975){
         textCoding.classList.add('anim-coding-text');
         imgCoding.classList.add('anim-coding-img');
     }
-    if(window.scrollY>760 && window.scrollY<1675){
+    if(window.scrollY>646 && window.scrollY<1940){
         textTeaching.classList.add('anim-coding-img');
         imgTeaching.classList.add('anim-coding-text');
     }
-    if(window.scrollY>1200){
+    if(window.scrollY>1100){
         articleLeft.classList.add('anim-side-left');
         articleRight.classList.add('anim-side-right');
+    }
+    if(window.scrollY>592 && window.scrollY<1570){
+        header.style.backgroundColor = "#0D0D0D";
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#EAF205"; 
+        }
+    }else if(window.scrollY>1570){
+        header.style.backgroundColor = "#F24130";
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#0D0D0D"; 
+        }
+    }else if(window.scrollY<592){
+        header.style.backgroundColor = "#EAF205";
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#0D0D0D"; 
+        }
     }
     console.log(window.scrollY);
 });
