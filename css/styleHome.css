@@ -1,3 +1,5 @@
+/* Using color : #EAF205 #0D0D0D #EEF26B #8C765A #F24130 */
+
 *, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
@@ -6,16 +8,20 @@
 
 body{
     width: 100%;
-    height: 200vh;
+    height: auto;
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
 }
 
 header{
-    font-family: 'Open sans', Arial, Helvetica, sans-serif;
+    position: fixed;
+    z-index: 10;
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
     width: 100%;
-    font: bold;
+    font-weight: bold;
     padding: 30px 30px 30px 30px;
-    background-color: black;
-    font-size: 1.2em;    
+    background-color: #EAF205;
+    font-size: 1.2em;   
+    transition: all 0.4s ease-in-out;
 }
 
 header nav{
@@ -36,11 +42,11 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: white;
+    color: #0D0D0D;
     text-decoration: none;
     font: bold;
     position: relative;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.05em;
 }
 
 header nav ul li a:after{
@@ -51,7 +57,7 @@ header nav ul li a:after{
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background-color: #0D0D0D;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -61,11 +67,11 @@ header nav ul li a:hover:after{
     left: 0; 
 }
 
-section{
+#firstSection{
     width: 100%;
-    height: 852px;
-    background: #333;
-    background: url(../images/building.jpg);
+    height: 117vh;
+    background: #0D0D0D;
+    background: url(../images/design.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -73,10 +79,23 @@ section{
     font-size: 1.8em;
 }
 
-section .discoverBtn{
-    border: 2px solid white;
+.anim-back-first{
+    animation: slideBack 2s;
+}
+
+@keyframes slideBack{
+    from{
+        transform : translateX(-740px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.discoverBtn{
+    border: 2px solid #EAF205;
     text-decoration: none;
-    color: white;
+    color: #EAF205;
     outline: none;
     background: transparent;
     font-size: 20px;
@@ -85,18 +104,310 @@ section .discoverBtn{
     cursor: pointer;
     position: absolute;
     right: 540px;
-    top: 840px;
+    top: 610px;
 }
 
-section .discoverBtn:hover{
+.anim-button{
+    animation: slide 1.5s;
+}
+
+@keyframes slide{
+    from{
+        transform : translateX(740px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+#firstSection .discoverBtn:hover{
     transition: all 0.3s ease-in-out;
-    background: white;
-    color: #333;
+    background: #EAF205;
+    color: #0D0D0D;
 }
 
-section h1{
+#firstSection h1{
     position: absolute;
     left: 100px;
-    top: 200px;
+    top: 250px;
 }
 
+#secondSection{
+  width: 100%;
+  height: 170vh;
+  background-color: #EAF205;
+}
+
+#secondSection h2{
+  font-size: 25px;
+  font-weight: normal;
+  color: #0D0D0D;
+}
+
+#secondSection .codingInfo h2{
+  margin-left: 20px;
+  margin-top: 60px;
+  margin-right: 50px;
+  text-align: right;
+}
+
+.anim-coding-text{
+  animation: textCoding linear 2s;
+}
+
+@keyframes textCoding{
+  from{
+    transform: translateX(-800px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+
+#secondSection .codingInfo i{
+  color: #0D0D0D;
+  font-size: 60px;
+  position: absolute;
+  top: 1060px;
+  left: 150px;
+  border-radius: 50%;
+}
+
+#secondSection .teachingInfo i{
+  color: #0D0D0D;
+  font-size: 60px;
+  position: absolute;
+  top: 1530px;
+  right: 150px;
+  border-radius: 50%;
+}
+
+#secondSection i:hover{
+  background: #0D0D0D;
+  transition: all 0.4s ease-in-out;
+  color: #EAF205;
+}
+
+#secondSection .codingInfo{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 200px;
+  padding-top: 80px;
+}
+
+#secondSection .codingInfo img{
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.anim-coding-img{
+  animation: imgCoding linear 2.5s;
+}
+
+@keyframes imgCoding{
+  from{
+    transform: translateX(800px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+
+#secondSection .teachingInfo h2{
+  margin-left: 50px;
+  margin-top: 40px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+#secondSection .teachingInfo{
+  display: flex;
+  flex-direction:row;
+}
+
+#secondSection .teachingInfo img{
+  margin-left: 30px;
+}
+
+#thirdSection{
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#thirdSection .leftSide{
+  background-color: #EAF205;
+  height: 90%;
+  width: 600px;
+  border-radius: 20px;
+  color: #0D0D0D;
+}
+
+#thirdSection .rightSide{
+  background-color: #0D0D0D;
+  height: 90%;
+  width: 600px;
+  border-radius: 20px;
+  color: #EAF205;
+}
+
+#thirdSection h2{
+  font-size: 3em;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.anim-side-left{
+  animation: slideLeftRight linear 2s;
+}
+
+.anim-side-right{
+  animation: slideRightLeft linear 2s;
+}
+
+@keyframes slideLeftRight{
+  from{
+      transform : translateX(740px);
+  }
+  to{
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideRightLeft{
+  from{
+      transform : translateX(-740px);
+  }
+  to{
+      transform: translateX(0);
+  }
+}
+
+#thirdSection h1{
+    position: absolute;
+    top: 1400px;
+    right: 530px;
+    font-size: 2em;
+    font-weight:normal;
+}
+
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: #EAF205;
+  font-family: 'Roboto mono', Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+}
+
+footer h1{
+  color: #0D0D0D;
+  font-size: 20px;
+  padding-bottom: 5px;
+  font-family: 'Work sans', Arial, Helvetica, sans-serif;
+}
+
+footer #otherInformation li,p{
+  color: #0D0D0D;
+  font-size: 13px;
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+footer #otherInformation a{
+  color: #0D0D0D;
+  text-decoration: none;
+}
+
+footer #otherInformation{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+footer #companyDescription{
+  width: 450px;
+  height: auto;
+}
+
+footer .info{
+  padding-left: 200px;
+}
+
+footer .media{
+  width: 40px;
+  height: 40px;
+}
+
+footer #socialList{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .toBulle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background: #EAF205;
+  cursor: pointer;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.anim-media{
+  animation: mediaSlide 1s;
+}
+
+@keyframes mediaSlide{
+  from{
+      right: 740px;
+  }
+  to{
+      right: 0%;
+  }
+}
+
+footer h2{
+  color: #0D0D0D;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .toBulle:hover{
+  background-color: #F24130;
+  transition: all 0.3s ease-in-out;
+}
+
+.cont-bandes {
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  z-index: 500;
+}
+
+.bande {
+  width: 10%;
+  height: 0%;
+}
+.bande:nth-child(even){
+  background: #0D0D0D;
+}
+.bande:nth-child(odd){
+  background: #f1f1f1;
+}
