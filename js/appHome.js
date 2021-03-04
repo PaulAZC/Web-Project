@@ -1,12 +1,15 @@
 const button = document.querySelector('.discoverBtn');
 const textSection1 = document.getElementById('titleFirstSection');
 const load = document.querySelector('.load');
-const cube = document.querySelector('.cube');
 const backgroundFisrt = document.querySelector('.section1');
 const allBandes = document.querySelectorAll('.bande');
 const TLAnim = new TimelineMax();
 const articleLeft = document.querySelector('.leftSide');
 const articleRight = document.querySelector('.rightSide');
+const textCoding = document.querySelector('.textCoding');
+const imgCoding = document.querySelector('.imgCoding');
+const textTeaching = document.querySelector('.textTeaching');
+const imgTeaching = document.querySelector('.imgTeaching');
 
 // function delay(n) {
 //     return new Promise((done) => {
@@ -43,37 +46,43 @@ window.addEventListener('load', () => {
     })
     .pauseFor(2000)
     .changeDelay(80)
-    .typeString('<span style="font-family:Roboto Mono; color:#EAF205; font-size:25px">Welcome to Web Company, </span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#EAF205; font-size:25px">Welcome to Web Company, </span>')
     .pauseFor(1000)
-    .typeString('<span style="font-family:Roboto Mono; color:#EAF205; font-size:25px">that help you in </span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#EAF205; font-size:25px">that help you in </span>')
     .pauseFor(1000) 
-    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">web design</span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">web design</span>')
     .pauseFor(1000)
     .deleteChars(10)
-    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">cybersercurity</span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">cybersercurity</span>')
     .pauseFor(1000)
     .deleteChars(14)
-    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">web development</span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">web development</span>')
     .pauseFor(1000)
     .deleteChars(15)
-    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">audit</span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">audit</span>')
     .pauseFor(1000)
     .deleteChars(5)
-    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">teaching</span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">teaching</span>')
     .start();
-
-    backgroundFisrt.classList.add('anim-back-first');
 });
 
 window.addEventListener('scroll', ()=>{    
-    if(window.scrollY>180){
+    if(window.scrollY>50){
         button.classList.add('anim-button');
     }
-
-    if(window.scrollY>500){
-        cube.classList.add('anim-cube');
+    if(window.scrollY>240){
+        textCoding.classList.add('anim-coding-text');
+        imgCoding.classList.add('anim-coding-img');
     }
-    if(window.scrollY>1000){
+    if(window.scrollY>630){
+        textTeaching.classList.add('anim-coding-img');
+        imgTeaching.classList.add('anim-coding-text');
+    }
+    // else if(window.scrollY>900 || window.scrollY<300){
+    //     textTeaching.classList.remove('anim-coding-img');
+    //     imgTeaching.classList.remove('anim-coding-text');
+    // }
+    if(window.scrollY>950){
         articleLeft.classList.add('anim-side-left');
         articleRight.classList.add('anim-side-right');
     }
