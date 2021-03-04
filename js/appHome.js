@@ -5,6 +5,8 @@ const cube = document.querySelector('.cube');
 const backgroundFisrt = document.querySelector('.section1');
 const allBandes = document.querySelectorAll('.bande');
 const TLAnim = new TimelineMax();
+const articleLeft = document.querySelector('.leftSide');
+const articleRight = document.querySelector('.rightSide');
 
 // function delay(n) {
 //     return new Promise((done) => {
@@ -70,6 +72,10 @@ window.addEventListener('scroll', ()=>{
 
     if(window.scrollY>500){
         cube.classList.add('anim-cube');
+    }
+    if(window.scrollY>1000){
+        articleLeft.classList.add('anim-side-left');
+        articleRight.classList.add('anim-side-right');
     }
 });
 
