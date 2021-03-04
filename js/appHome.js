@@ -3,7 +3,6 @@ const textSection1 = document.getElementById('titleFirstSection');
 const load = document.querySelector('.load');
 const cube = document.querySelector('.cube');
 const backgroundFisrt = document.querySelector('.section1');
-const media = document.querySelectorAll('.socialList');
 const allBandes = document.querySelectorAll('.bande');
 const TLAnim = new TimelineMax();
 
@@ -42,11 +41,23 @@ window.addEventListener('load', () => {
     })
     .pauseFor(2000)
     .changeDelay(80)
-    .typeString('Welcome to my site, ')
+    .typeString('<span style="font-family:Roboto Mono; color:#EAF205; font-size:25px">Welcome to Web Company, </span>')
     .pauseFor(1000)
-    .typeString('that talk about ')
+    .typeString('<span style="font-family:Roboto Mono; color:#EAF205; font-size:25px">that help you in </span>')
     .pauseFor(1000) 
-    .typeString('<span style="color:red">that</span>')
+    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">web design</span>')
+    .pauseFor(1000)
+    .deleteChars(10)
+    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">cybersercurity</span>')
+    .pauseFor(1000)
+    .deleteChars(14)
+    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">web development</span>')
+    .pauseFor(1000)
+    .deleteChars(15)
+    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">audit</span>')
+    .pauseFor(1000)
+    .deleteChars(5)
+    .typeString('<span style="font-family:Roboto Mono; color:#F24130; font-size:25px">teaching</span>')
     .start();
 
     backgroundFisrt.classList.add('anim-back-first');
@@ -59,9 +70,6 @@ window.addEventListener('scroll', ()=>{
 
     if(window.scrollY>500){
         cube.classList.add('anim-cube');
-    }
-    if(window.scrollY>600){
-        media.classList.add('anim-media');
     }
 });
 

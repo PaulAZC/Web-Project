@@ -1,3 +1,5 @@
+/* Using color : #EAF205 #0D0D0D #EEF26B #8C765A */
+
 *, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
@@ -10,11 +12,11 @@ body{
 }
 
 header{
-    font-family: 'Open sans', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
     width: 100%;
     font: bold;
     padding: 30px 30px 30px 30px;
-    background-color: black;
+    background-color: #EAF205;
     font-size: 1.2em;   
 }
 
@@ -36,7 +38,7 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: white;
+    color: #0D0D0D;
     text-decoration: none;
     font: bold;
     position: relative;
@@ -51,7 +53,7 @@ header nav ul li a:after{
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background: #0D0D0D;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -63,9 +65,9 @@ header nav ul li a:hover:after{
 
 #firstSection{
     width: 100%;
-    height: 852px;
+    height: 730px;
     background: #333;
-    background: url(../images/building.jpg);
+    background: url(../images/design.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,9 +89,9 @@ header nav ul li a:hover:after{
 }
 
 .discoverBtn{
-    border: 2px solid white;
+    border: 2px solid #EAF205;
     text-decoration: none;
-    color: white;
+    color: #EAF205;
     outline: none;
     background: transparent;
     font-size: 20px;
@@ -98,7 +100,7 @@ header nav ul li a:hover:after{
     cursor: pointer;
     position: absolute;
     right: 540px;
-    top: 840px;
+    top: 700px;
 }
 
 .anim-button{
@@ -116,14 +118,14 @@ header nav ul li a:hover:after{
 
 #firstSection .discoverBtn:hover{
     transition: all 0.3s ease-in-out;
-    background: white;
-    color: #333;
+    background: #EAF205;
+    color: #0D0D0D;
 }
 
 #firstSection h1{
     position: absolute;
     left: 100px;
-    top: 200px;
+    top: 250px;
 }
 
 #secondSection{
@@ -238,26 +240,26 @@ header nav ul li a:hover:after{
 footer{
   width: 100%;
   height: 300px;
-  background-color: black;
-  font-family: 'Open sans', Arial, Helvetica, sans-serif;
+  background-color: #EAF205;
+  font-family: 'Roboto mono', Arial, Helvetica, sans-serif;
   padding-top: 10px;
 }
 
 footer h1{
-  color: white;
+  color: #0D0D0D;
   font-size: 20px;
   padding-bottom: 5px;
 }
 
 footer #otherInformation li,p{
-  color: white;
+  color: #0D0D0D;
   font-size: 13px;
   list-style: none;
   padding-bottom: 5px;
 }
 
 footer #otherInformation a{
-  color: white;
+  color: #0D0D0D;
   text-decoration: none;
 }
 
@@ -291,12 +293,11 @@ footer .toBulle {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 1px solid #f1f1f1;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
-  background: #f1f1f1;
+  background: #EAF205;
   cursor: pointer;
   position: relative;
   margin-right: 15px;
@@ -307,17 +308,17 @@ footer .toBulle {
   animation: mediaSlide 1s;
 }
 
-@keyframes mediaSlide {
-    from {
-      transform: translateY(-100px);
-    }
-    to {
-      transform: translateY(0px);
-    }
+@keyframes mediaSlide{
+  from{
+      right: 740px;
+  }
+  to{
+      right: 0%;
+  }
 }
 
 footer h2{
-  color: white;
+  color: #0D0D0D;
   font-size: 15px;
   display: flex;
   flex-direction: row;
@@ -325,9 +326,8 @@ footer h2{
 }
 
 footer .toBulle:hover{
-  background-color: gray;
+  background-color: #F24130;
   transition: all 0.3s ease-in-out;
-  border: 1px solid gray;;
 }
 
 .cont-bandes {
@@ -339,7 +339,6 @@ footer .toBulle:hover{
   overflow: hidden;
   position: absolute;
   pointer-events: none;
-  /* background: #000; */
   z-index: 500;
 }
 
