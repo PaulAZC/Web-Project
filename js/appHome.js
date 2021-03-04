@@ -67,24 +67,21 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('scroll', ()=>{    
-    if(window.scrollY>50){
+    if(window.scrollY>50 && window.scrollY<665){
         button.classList.add('anim-button');
     }
-    if(window.scrollY>240){
+    if(window.scrollY>270 && window.scrollY<1175){
         textCoding.classList.add('anim-coding-text');
         imgCoding.classList.add('anim-coding-img');
     }
-    if(window.scrollY>630){
+    if(window.scrollY>760 && window.scrollY<1675){
         textTeaching.classList.add('anim-coding-img');
         imgTeaching.classList.add('anim-coding-text');
     }
-    // else if(window.scrollY>900 || window.scrollY<300){
-    //     textTeaching.classList.remove('anim-coding-img');
-    //     imgTeaching.classList.remove('anim-coding-text');
-    // }
-    if(window.scrollY>950){
+    if(window.scrollY>1200){
         articleLeft.classList.add('anim-side-left');
         articleRight.classList.add('anim-side-right');
     }
+    console.log(window.scrollY);
 });
 

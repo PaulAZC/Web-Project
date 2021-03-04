@@ -131,7 +131,7 @@ header nav ul li a:hover:after{
 
 #secondSection{
   width: 100%;
-  height: 125vh;
+  height: 170vh;
   background-color: #EAF205;
 }
 
@@ -161,9 +161,35 @@ header nav ul li a:hover:after{
   }
 }
 
+#secondSection .codingInfo i{
+  color: #0D0D0D;
+  font-size: 60px;
+  position: absolute;
+  top: 1060px;
+  left: 150px;
+  border-radius: 50%;
+}
+
+#secondSection .teachingInfo i{
+  color: #0D0D0D;
+  font-size: 60px;
+  position: absolute;
+  top: 1530px;
+  right: 150px;
+  border-radius: 50%;
+}
+
+#secondSection i:hover{
+  background: #0D0D0D;
+  transition: all 0.4s ease-in-out;
+  color: #EAF205;
+}
+
 #secondSection .codingInfo{
   display: flex;
   flex-direction: row-reverse;
+  margin-bottom: 200px;
+  padding-top: 80px;
 }
 
 #secondSection .codingInfo img{
@@ -211,7 +237,7 @@ header nav ul li a:hover:after{
 }
 
 #thirdSection .leftSide{
-  background-color: #F24130;
+  background-color: #EAF205;
   height: 90%;
   width: 600px;
   border-radius: 20px;
@@ -223,7 +249,7 @@ header nav ul li a:hover:after{
   height: 90%;
   width: 600px;
   border-radius: 20px;
-  color: #F24130;
+  color: #EAF205;
 }
 
 #thirdSection h2{
