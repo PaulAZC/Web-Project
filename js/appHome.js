@@ -95,10 +95,15 @@ window.addEventListener('scroll', ()=>{
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#0D0D0D";  
         }
-    }else if(window.scrollY<592){
+    }else if(window.scrollY>148 && window.scrollY<592){
         header.style.backgroundColor = "#EAF205";
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#0D0D0D"; 
+        }
+    }else if(window.scrollY<148){
+        header.style.backgroundColor = "transparent";
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#EAF205"; 
         }
     }
     console.log(window.scrollY);

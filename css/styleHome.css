@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
     height: auto;
@@ -19,7 +23,7 @@ header{
     width: 100%;
     font-weight: bold;
     padding: 30px 30px 30px 30px;
-    background-color: #EAF205;
+    background-color: transparent;
     font-size: 1.2em;   
     transition: all 0.4s ease-in-out;
 }
@@ -42,7 +46,7 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: #0D0D0D;
+    color: #EAF205;
     text-decoration: none;
     font: bold;
     position: relative;
