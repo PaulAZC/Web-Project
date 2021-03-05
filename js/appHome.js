@@ -12,7 +12,7 @@ const textTeaching = document.querySelector('.textTeaching');
 const imgTeaching = document.querySelector('.imgTeaching');
 let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
-let fontHeaderHover = document.querySelectorAll('nav a:hover');
+let fontHeaderHover = document.querySelectorAll('header nav ul li a:after');
 
 // function delay(n) {
 //     return new Promise((done) => {
@@ -88,12 +88,12 @@ window.addEventListener('scroll', ()=>{
     if(window.scrollY>592 && window.scrollY<1570){
         header.style.backgroundColor = "#0D0D0D";
         for(let i=0; i<fontHeader.length; i++){
-            fontHeader[i].style.color = "#EAF205"; 
+            fontHeader[i].style.color = "#EAF205";
         }
     }else if(window.scrollY>1570){
         header.style.backgroundColor = "#F24130";
         for(let i=0; i<fontHeader.length; i++){
-            fontHeader[i].style.color = "#0D0D0D"; 
+            fontHeader[i].style.color = "#0D0D0D";  
         }
     }else if(window.scrollY<592){
         header.style.backgroundColor = "#EAF205";

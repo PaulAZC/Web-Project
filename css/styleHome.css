@@ -62,6 +62,10 @@ header nav ul li a:after{
     width: 0;
 }
 
+.anim-header{
+  background-color: #EAF205;
+}
+
 header nav ul li a:hover:after{
     width: 100%; 
     left: 0; 
