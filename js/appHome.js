@@ -4,8 +4,6 @@ const load = document.querySelector('.load');
 const backgroundFisrt = document.querySelector('.section1');
 const allBandes = document.querySelectorAll('.bande');
 const TLAnim = new TimelineMax();
-const articleLeft = document.querySelector('.leftSide');
-const articleRight = document.querySelector('.rightSide');
 const textCoding = document.querySelector('.textCoding');
 const imgCoding = document.querySelector('.imgCoding');
 const textTeaching = document.querySelector('.textTeaching');
@@ -13,36 +11,7 @@ const imgTeaching = document.querySelector('.imgTeaching');
 let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
 let fontHeaderHover = document.querySelectorAll('header nav ul li a:after');
-
-// function delay(n) {
-//     return new Promise((done) => {
-//       setTimeout(() => {
-//         done();
-//       }, n)
-//     })
-//   }
-  
-//   barba.init({
-  
-//     sync: true,
-  
-//     transitions: [
-//       {
-//         async leave(){
-//           const done = this.async();
-//           TLAnim
-//           .to(allBandes, {height: '100%', stagger: 0.05})  
-//           await delay(1500);
-//           done();
-  
-//         },
-//         enter(){
-//           TLAnim
-//           .to(allBandes, {height: '0%', stagger: 0.05})
-//         }
-//       }
-//     ]
-//   });
+fontHeaderHover = document.styleSheets;
 
 window.addEventListener('load', () => {
     new Typewriter(textSection1, {
@@ -81,16 +50,12 @@ window.addEventListener('scroll', ()=>{
         textTeaching.classList.add('anim-coding-img');
         imgTeaching.classList.add('anim-coding-text');
     }
-    if(window.scrollY>1100){
-        articleLeft.classList.add('anim-side-left');
-        articleRight.classList.add('anim-side-right');
-    }
     if(window.scrollY>592 && window.scrollY<1570){
         header.style.backgroundColor = "#0D0D0D";
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#EAF205";
         }
-    }else if(window.scrollY>1570){
+    }else if(window.scrollY>1572){
         header.style.backgroundColor = "#F24130";
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#0D0D0D";  
@@ -103,7 +68,8 @@ window.addEventListener('scroll', ()=>{
     }else if(window.scrollY<148){
         header.style.backgroundColor = "transparent";
         for(let i=0; i<fontHeader.length; i++){
-            fontHeader[i].style.color = "#EAF205"; 
+            fontHeader[i].style.color = "#EAF205";
+            fontHeaderHover.backgroundColor = "#EAF205";
         }
     }
     console.log(window.scrollY);
