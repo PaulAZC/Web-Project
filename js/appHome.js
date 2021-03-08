@@ -1,3 +1,4 @@
+//Variable declaration
 const button = document.querySelector('.discoverBtn');
 const textSection1 = document.getElementById('titleFirstSection');
 const load = document.querySelector('.load');
@@ -11,8 +12,9 @@ const imgTeaching = document.querySelector('.imgTeaching');
 const h2container = document.querySelector('.h2Container');
 let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
-var sY;
 
+//Typewriter function that we use with the library 
+//Begin with the load of the page
 window.addEventListener('load', () => {
     new Typewriter(textSection1, {
     })
@@ -38,6 +40,8 @@ window.addEventListener('load', () => {
     .start();
 });
 
+//Parameters of the animations and header
+//in function of the scrollY
 window.addEventListener('scroll', ()=>{ 
     if(window.scrollY>38 && window.scrollY<570){
         button.classList.add('anim-button');
@@ -81,33 +85,47 @@ window.addEventListener('scroll', ()=>{
             fontHeader[i].style.color = "#0D0D0D";
         }
     }
-    if(window.scrollY>3350){
-        header.style.backgroundColor = "#F24130";
-        for(let i=0; i<fontHeader.length; i++){
-            fontHeader[i].style.color = "#0D0D0D";
-        }
-    }
     if(window.scrollY>2730 && window.scrollY<3690){
         header.style.zIndex = "-1000";
     }else{
         header.style.zIndex = "10";
     }
     sY = window.scrollY;
-    console.log(sY);
 });
 
-$(document).ready(function(){
-    var mouseX, mouseY;
-    var traX, traY;
-    $(document).mousemove(function(e){
-      mouseX = e.pageX;
-      mouseY = e.pageY;
-      traX = ((200 * mouseX) / 570) + 40;
-      traY = ((200 * mouseY) / 570) + 50;
-      $(".word").css({"background-position": traX + "%" + traY + "%"});
-    });
-    $(window).scroll(function(){
-        //$(".word").css({"background-position": "0%" + sY/500 + "%"});
-    });
-});
+//Third section, transparent image + position variation 
+//in function of the mouse position and the scroll
+let mouseClientX = 0;
+let mouseClientY = 0;
+
+function update() {
+    //Get the position of the mouse and of the scroll
+    const mousePageX = mouseClientX + 4*pageXOffset; //Scroll x and y in real time
+    const mousePageY = mouseClientY + 4*pageYOffset;
+
+    const traX = ((200 * mousePageX) / 570) + 40; //Variation of the image position 
+    const traY = ((200 * mousePageY) / 570) + 50;
+    console.log(pageYOffset);
+    const backgroundPosition = traX + "% " + traY + "%"; //That we put here in percentage
+
+    for (const el of document.querySelectorAll('.word')) { //For each class that have the classname 'word'
+        el.style.backgroundPosition = backgroundPosition;  //Put the position
+    }
+}
+
+document.addEventListener('mousemove', e => {
+    //Get the position of the mouse
+    mouseClientX = e.clientX;
+    mouseClientY = e.clientY;
+
+    update();
+}, false);
+
+addEventListener('scroll', update, false); //Update the scroll
+
+if (document.readyState === 'loading') {   //When the page is loading
+    addEventListener('DOMContentLoaded', update, false);
+} else {
+    update();
+}
   
