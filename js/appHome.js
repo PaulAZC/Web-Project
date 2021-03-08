@@ -8,10 +8,10 @@ const textCoding = document.querySelector('.textCoding');
 const imgCoding = document.querySelector('.imgCoding');
 const textTeaching = document.querySelector('.textTeaching');
 const imgTeaching = document.querySelector('.imgTeaching');
+const h2container = document.querySelector('.h2Container');
 let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
-let fontHeaderHover = document.querySelectorAll('header nav ul li a:after');
-fontHeaderHover = document.styleSheets;
+var sY;
 
 window.addEventListener('load', () => {
     new Typewriter(textSection1, {
@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
     .start();
 });
 
-window.addEventListener('scroll', ()=>{    
+window.addEventListener('scroll', ()=>{ 
     if(window.scrollY>38 && window.scrollY<570){
         button.classList.add('anim-button');
     }
@@ -52,26 +52,62 @@ window.addEventListener('scroll', ()=>{
     }
     if(window.scrollY>592 && window.scrollY<1570){
         header.style.backgroundColor = "#0D0D0D";
+        header.style.setProperty("--main-bg-color", '#EAF205');
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#EAF205";
         }
-    }else if(window.scrollY>1572){
+    }else if(window.scrollY>1572 && window.scrollY<2457){
         header.style.backgroundColor = "#F24130";
+        header.style.setProperty("--main-bg-color", '#0D0D0D');
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#0D0D0D";  
         }
     }else if(window.scrollY>148 && window.scrollY<592){
         header.style.backgroundColor = "#EAF205";
+        header.style.setProperty("--main-bg-color", '#0D0D0D');
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#0D0D0D"; 
         }
     }else if(window.scrollY<148){
         header.style.backgroundColor = "transparent";
+        header.style.setProperty("--main-bg-color", '#EAF205');
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#EAF205";
-            fontHeaderHover.backgroundColor = "#EAF205";
         }
     }
-    console.log(window.scrollY);
+    if(window.scrollY>2457 && window.scrollY<3350){
+        header.style.backgroundColor = "#0D0D0D";
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#0D0D0D";
+        }
+    }
+    if(window.scrollY>3350){
+        header.style.backgroundColor = "#F24130";
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#0D0D0D";
+        }
+    }
+    if(window.scrollY>2730 && window.scrollY<3690){
+        header.style.zIndex = "-1000";
+    }else{
+        header.style.zIndex = "10";
+    }
+    sY = window.scrollY;
+    console.log(sY);
 });
 
+$(document).ready(function(){
+    var mouseX, mouseY;
+    var traX, traY;
+    $(document).mousemove(function(e){
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+      traX = ((200 * mouseX) / 570) + 40;
+      traY = ((200 * mouseY) / 570) + 50;
+      $(".word").css({"background-position": traX + "%" + traY + "%"});
+    });
+    $(window).scroll(function(){
+        //$(".word").css({"background-position": "0%" + sY/500 + "%"});
+    });
+});
+  

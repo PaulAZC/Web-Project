@@ -53,6 +53,10 @@ header nav ul li a{
     letter-spacing: 0.05em;
 }
 
+:root{
+  --main-bg-color : #EAF205;
+}
+
 header nav ul li a:after{
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -61,7 +65,7 @@ header nav ul li a:after{
     height: 2px;
     left: 50%;
     position: absolute;
-    background-color: #0D0D0D;
+    background-color: var(--main-bg-color);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -255,23 +259,6 @@ header nav ul li a:hover:after{
   height: 170px;
 }
 
-#thirdSection .firstText, .secondText{
-  white-space: nowrap;
-  font-size: 170px;
-  animation: scrollText linear 25s infinite;
-}
-
-#thirdSection .h2Container{
-  height: 150px;
-}
-
-#thirdSection h2{
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
-  align-items: center;
-}
-
 @keyframes scrollText{
   0%{
     transform: translate(0%,0);
@@ -279,6 +266,28 @@ header nav ul li a:hover:after{
   100%{
     transform: translate(-100%, 0);
   }
+}
+
+#thirdSection .firstText, .secondText{
+  white-space: nowrap;
+  font-size: 170px;
+  animation: scrollText linear 25s infinite;
+}
+
+#thirdSection .h2Container{
+  height: 230vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#thirdSection .word{
+  font-size: 150px;
+  text-align: center;
+  color: transparent;
+  background: url(../images/thirdBack.jpg) repeat;
+  -webkit-background-clip: text;
 }
 
 footer{
@@ -375,25 +384,3 @@ footer .toBulle:hover{
   transition: all 0.3s ease-in-out;
 }
 
-.cont-bandes {
-  width: 100%;
-  height: 100vh;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: absolute;
-  pointer-events: none;
-  z-index: 500;
-}
-
-.bande {
-  width: 10%;
-  height: 0%;
-}
-.bande:nth-child(even){
-  background: #0D0D0D;
-}
-.bande:nth-child(odd){
-  background: #f1f1f1;
-}
