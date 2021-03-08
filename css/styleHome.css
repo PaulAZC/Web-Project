@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
     height: auto;
@@ -19,7 +23,7 @@ header{
     width: 100%;
     font-weight: bold;
     padding: 30px 30px 30px 30px;
-    background-color: #EAF205;
+    background-color: transparent;
     font-size: 1.2em;   
     transition: all 0.4s ease-in-out;
 }
@@ -42,11 +46,15 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: #0D0D0D;
+    color: #EAF205;
     text-decoration: none;
     font: bold;
     position: relative;
     letter-spacing: 0.05em;
+}
+
+:root{
+  --main-bg-color : #EAF205;
 }
 
 header nav ul li a:after{
@@ -57,9 +65,13 @@ header nav ul li a:after{
     height: 2px;
     left: 50%;
     position: absolute;
-    background-color: #0D0D0D;
+    background-color: var(--main-bg-color);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
+}
+
+.anim-header{
+  background-color: #EAF205;
 }
 
 header nav ul li a:hover:after{
@@ -231,68 +243,51 @@ header nav ul li a:hover:after{
 
 #thirdSection{
   width: 100%;
-  height: 100vh;
-  margin-bottom: 20px;
-  margin-top: 80px;
+  height: auto;
+  margin: 0px;
+  background-color: #0D0D0D;
+  color: #EAF205;
+  font-weight: bold;
+}
+
+#thirdSection .textContainer{
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  height: 170px;
 }
 
-#thirdSection .leftSide{
-  background-color: #EAF205;
-  height: 90%;
-  width: 600px;
-  border-radius: 20px;
-  color: #0D0D0D;
-}
-
-#thirdSection .rightSide{
-  background-color: #0D0D0D;
-  height: 90%;
-  width: 600px;
-  border-radius: 20px;
-  color: #EAF205;
-}
-
-#thirdSection h2{
-  font-size: 3em;
-  padding-left: 30px;
-  padding-top: 10px;
-}
-
-.anim-side-left{
-  animation: slideLeftRight linear 2s;
-}
-
-.anim-side-right{
-  animation: slideRightLeft linear 2s;
-}
-
-@keyframes slideLeftRight{
-  from{
-      transform : translateX(740px);
+@keyframes scrollText{
+  0%{
+    transform: translate(0%,0);
   }
-  to{
-      transform: translateX(0);
+  100%{
+    transform: translate(-100%, 0);
   }
 }
 
-@keyframes slideRightLeft{
-  from{
-      transform : translateX(-740px);
-  }
-  to{
-      transform: translateX(0);
-  }
+#thirdSection .firstText, .secondText{
+  white-space: nowrap;
+  font-size: 170px;
+  animation: scrollText linear 25s infinite;
 }
 
-#thirdSection h1{
-    position: absolute;
-    top: 1400px;
-    right: 530px;
-    font-size: 2em;
-    font-weight:normal;
+#thirdSection .h2Container{
+  height: 250vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#thirdSection .word{
+  font-size: 150px;
+  text-align: center;
+  color: transparent;
+  background: url(../images/thirdBack.jpg) repeat;
+  -webkit-background-clip: text;
 }
 
 footer{
@@ -389,25 +384,3 @@ footer .toBulle:hover{
   transition: all 0.3s ease-in-out;
 }
 
-.cont-bandes {
-  width: 100%;
-  height: 100vh;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  position: absolute;
-  pointer-events: none;
-  z-index: 500;
-}
-
-.bande {
-  width: 10%;
-  height: 0%;
-}
-.bande:nth-child(even){
-  background: #0D0D0D;
-}
-.bande:nth-child(odd){
-  background: #f1f1f1;
-}

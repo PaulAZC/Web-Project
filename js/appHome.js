@@ -1,49 +1,20 @@
+//Variable declaration
 const button = document.querySelector('.discoverBtn');
 const textSection1 = document.getElementById('titleFirstSection');
 const load = document.querySelector('.load');
 const backgroundFisrt = document.querySelector('.section1');
 const allBandes = document.querySelectorAll('.bande');
 const TLAnim = new TimelineMax();
-const articleLeft = document.querySelector('.leftSide');
-const articleRight = document.querySelector('.rightSide');
 const textCoding = document.querySelector('.textCoding');
 const imgCoding = document.querySelector('.imgCoding');
 const textTeaching = document.querySelector('.textTeaching');
 const imgTeaching = document.querySelector('.imgTeaching');
+const h2container = document.querySelector('.h2Container');
 let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
-let fontHeaderHover = document.querySelectorAll('nav a:hover');
 
-// function delay(n) {
-//     return new Promise((done) => {
-//       setTimeout(() => {
-//         done();
-//       }, n)
-//     })
-//   }
-  
-//   barba.init({
-  
-//     sync: true,
-  
-//     transitions: [
-//       {
-//         async leave(){
-//           const done = this.async();
-//           TLAnim
-//           .to(allBandes, {height: '100%', stagger: 0.05})  
-//           await delay(1500);
-//           done();
-  
-//         },
-//         enter(){
-//           TLAnim
-//           .to(allBandes, {height: '0%', stagger: 0.05})
-//         }
-//       }
-//     ]
-//   });
-
+//Typewriter function that we use with the library 
+//Begin with the load of the page
 window.addEventListener('load', () => {
     new Typewriter(textSection1, {
     })
@@ -69,7 +40,9 @@ window.addEventListener('load', () => {
     .start();
 });
 
-window.addEventListener('scroll', ()=>{    
+//Parameters of the animations and header
+//in function of the scrollY
+window.addEventListener('scroll', ()=>{ 
     if(window.scrollY>38 && window.scrollY<570){
         button.classList.add('anim-button');
     }
@@ -81,26 +54,78 @@ window.addEventListener('scroll', ()=>{
         textTeaching.classList.add('anim-coding-img');
         imgTeaching.classList.add('anim-coding-text');
     }
-    if(window.scrollY>1100){
-        articleLeft.classList.add('anim-side-left');
-        articleRight.classList.add('anim-side-right');
-    }
     if(window.scrollY>592 && window.scrollY<1570){
         header.style.backgroundColor = "#0D0D0D";
+        header.style.setProperty("--main-bg-color", '#EAF205');
         for(let i=0; i<fontHeader.length; i++){
-            fontHeader[i].style.color = "#EAF205"; 
+            fontHeader[i].style.color = "#EAF205";
         }
-    }else if(window.scrollY>1570){
+    }else if(window.scrollY>1572 && window.scrollY<2457){
         header.style.backgroundColor = "#F24130";
+        header.style.setProperty("--main-bg-color", '#0D0D0D');
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#0D0D0D";  
+        }
+    }else if(window.scrollY>148 && window.scrollY<592){
+        header.style.backgroundColor = "#EAF205";
+        header.style.setProperty("--main-bg-color", '#0D0D0D');
         for(let i=0; i<fontHeader.length; i++){
             fontHeader[i].style.color = "#0D0D0D"; 
         }
-    }else if(window.scrollY<592){
-        header.style.backgroundColor = "#EAF205";
+    }else if(window.scrollY<148){
+        header.style.backgroundColor = "transparent";
+        header.style.setProperty("--main-bg-color", '#EAF205');
         for(let i=0; i<fontHeader.length; i++){
-            fontHeader[i].style.color = "#0D0D0D"; 
+            fontHeader[i].style.color = "#EAF205";
         }
     }
-    console.log(window.scrollY);
+    if(window.scrollY>2457 && window.scrollY<3350){
+        header.style.backgroundColor = "#0D0D0D";
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#0D0D0D";
+        }
+    }
+    if(window.scrollY>2730 && window.scrollY<3690){
+        header.style.zIndex = "-1000";
+    }else{
+        header.style.zIndex = "10";
+    }
+    sY = window.scrollY;
 });
 
+//Third section, transparent image + position variation 
+//in function of the mouse position and the scroll
+let mouseClientX = 0;
+let mouseClientY = 0;
+
+function update() {
+    //Get the position of the mouse and of the scroll
+    const mousePageX = mouseClientX + 4*pageXOffset; //Scroll x and y in real time
+    const mousePageY = mouseClientY + 4*pageYOffset;
+
+    const traX = ((200 * mousePageX) / 570) + 40; //Variation of the image position 
+    const traY = ((200 * mousePageY) / 570) + 50;
+    console.log(pageYOffset);
+    const backgroundPosition = traX + "% " + traY + "%"; //That we put here in percentage
+
+    for (const el of document.querySelectorAll('.word')) { //For each class that have the classname 'word'
+        el.style.backgroundPosition = backgroundPosition;  //Put the position
+    }
+}
+
+document.addEventListener('mousemove', e => {
+    //Get the position of the mouse
+    mouseClientX = e.clientX;
+    mouseClientY = e.clientY;
+
+    update();
+}, false);
+
+addEventListener('scroll', update, false); //Update the scroll
+
+if (document.readyState === 'loading') {   //When the page is loading
+    addEventListener('DOMContentLoaded', update, false);
+} else {
+    update();
+}
+  
