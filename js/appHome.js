@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
     .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">web design</span>')
     .pauseFor(1000)
     .deleteChars(10)
-    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">cybersercurity</span>')
+    .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">photography</span>')
     .pauseFor(1000)
     .deleteChars(14)
     .typeString('<span style="font-weight: normal; font-family:Roboto Mono; color:#F24130; font-size:25px">web development</span>')
