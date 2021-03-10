@@ -85,12 +85,18 @@ window.addEventListener('scroll', ()=>{
             fontHeader[i].style.color = "#0D0D0D";
         }
     }
-    if(window.scrollY>2730 && window.scrollY<3690){
+    if(window.scrollY>2730 && window.scrollY<3580){
         header.style.zIndex = "-1000";
     }else{
         header.style.zIndex = "10";
     }
-    sY = window.scrollY;
+    if(window.scrollY>3700){
+        header.style.backgroundColor = "#F24130";
+        header.style.setProperty("--main-bg-color", '#0D0D0D');
+        for(let i=0; i<fontHeader.length; i++){
+            fontHeader[i].style.color = "#0D0D0D";  
+        }
+    }
 });
 
 //Third section, transparent image + position variation 
@@ -105,7 +111,6 @@ function update() {
 
     const traX = ((200 * mousePageX) / 570) + 40; //Variation of the image position 
     const traY = ((200 * mousePageY) / 570) + 50;
-    console.log(pageYOffset);
     const backgroundPosition = traX + "% " + traY + "%"; //That we put here in percentage
 
     for (const el of document.querySelectorAll('.word')) { //For each class that have the classname 'word'

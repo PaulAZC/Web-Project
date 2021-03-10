@@ -1,0 +1,255 @@
+/* Using color : #EAF205 #0D0D0D #EEF26B #8C765A #F24130 */
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+header{
+    position: fixed;
+    z-index: 10;
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+    width: 100%;
+    font-weight: bold;
+    padding: 30px 30px 30px 30px;
+    background-color: transparent;
+    font-size: 1.2em;   
+    transition: all 0.4s ease-in-out;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li{
+    list-style: none;
+    padding-right: 20px;
+}
+
+header nav ul li a{
+    color: #f1f1f1;
+    text-decoration: none;
+    font: bold;
+    position: relative;
+    letter-spacing: 0.05em;
+}
+
+:root{
+  --main-bg-color : #f1f1f1;
+}
+
+header nav ul li a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+header nav ul li a:hover:after{
+    width: 100%; 
+    left: 0; 
+}
+
+/*First section */
+#ourPFirstS{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh; 
+    width: 100%;
+    background-image: url(../images/backOP.jpg);
+    background-position: 50% 50% ;
+    object-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+
+#ourPFirstS h2{
+    font-size: 60px;
+    font-family: 'Work sans', Arial, Helvetica, sans-serif;
+}
+
+#ourPFirstS p, #ourPFirstS a{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#ourPFirstS .title{
+    padding-bottom: 20px;
+    animation: apparition-title 2s;
+}
+
+#ourPFirstS .link{
+  display: flex;
+  animation: apparition 1s;
+}
+
+#ourPFirstS .lookAt{
+  padding-bottom: 20px;
+  animation: apparition 1s;
+}
+
+@keyframes apparition-title{
+  0%{
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes apparition{
+  0%{
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+#ourPFirstS .link a{
+    padding-left: 10px;
+    transition-duration: 0.5s;
+}
+
+#ourPFirstS .link a:hover{
+    transform: translateX(20%);
+}
+
+/* Second section */
+#ourPSecondS{
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+/*Footer*/
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #EAF205;
+    font-family: 'Roboto mono', Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+  }
+  
+  footer h1{
+    color: #0D0D0D;
+    font-size: 20px;
+    padding-bottom: 5px;
+    font-family: 'Work sans', Arial, Helvetica, sans-serif;
+  }
+  
+  footer #otherInformation li,p{
+    color: #0D0D0D;
+    font-size: 13px;
+    list-style: none;
+    padding-bottom: 5px;
+  }
+  
+  footer #otherInformation a{
+    color: #0D0D0D;
+    text-decoration: none;
+  }
+  
+  footer #otherInformation{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+  
+  footer #companyDescription{
+    width: 450px;
+    height: auto;
+  }
+  
+  footer .info{
+    padding-left: 200px;
+  }
+  
+  footer .media{
+    width: 40px;
+    height: 40px;
+  }
+  
+  footer #socialList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  footer .toBulle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background: #EAF205;
+    cursor: pointer;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .anim-media{
+    animation: mediaSlide 1s;
+  }
+  
+  @keyframes mediaSlide{
+    from{
+        right: 740px;
+    }
+    to{
+        right: 0%;
+    }
+  }
+  
+  footer h2{
+    color: #0D0D0D;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  footer .toBulle:hover{
+    background-color: #F24130;
+    transition: all 0.3s ease-in-out;
+  }
