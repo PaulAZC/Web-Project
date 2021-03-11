@@ -84,6 +84,7 @@ header nav ul li a:hover:after{
     background-position: center center;
     height: 100vh; 
     width: 100%;
+    max-width: 1280px;
     background-image: url(../images/backOP.jpg);
     background-position: 50% 50% ;
     object-position: center;
@@ -157,9 +158,7 @@ header nav ul li a:hover:after{
   width: 100%;
   height: 350vh;
   background-color: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
 }
 
 #baw_galery h1{
@@ -171,9 +170,26 @@ header nav ul li a:hover:after{
   padding-bottom: 100px;
 }
 
+.baw_container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#baw_galery .baw_images_container{
+  overflow: hidden;
+}
+
 #baw_galery img{
-  width: 500px;
+  width: 550px;
   height: auto;
+  padding: 30px 30px 30px 30px;
+  cursor: pointer;
+}
+
+.tennisman{
+  vertical-align: top;
 }
 
 /*Footer*/
