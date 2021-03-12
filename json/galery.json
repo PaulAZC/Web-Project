@@ -23,6 +23,44 @@
             "id" : "4",
             "description" : "girl with a dark glance",
             "type" : "portrait"
+        },
+        {
+            "name" : "Pompidou place",
+            "id" : "5",
+            "description" : "place of the center pompidou",
+            "type" : "landscape"
+        }
+    ],
+    "color":[
+        {
+            "name" : "Asian monument",
+            "id" : "6",
+            "description" : "asian girl behind a monument",
+            "type" : "landscape"
+        },
+        {
+            "name" : "Rubics mans",
+            "id" : "7",
+            "description" : "graffiti on a wall which represent 2 mans with rubics cube's faces",
+            "type" : "graffiti"
+        },
+        {
+            "name" : "Street restaurant",
+            "id" : "8",
+            "description" : "street place behind a restaurant",
+            "type" : "landscape"
+        },
+        {
+            "name" : "Architecture",
+            "id" : "9",
+            "description" : "architecture of a building",
+            "type" : "landscape"
+        },
+        {
+            "name" : "Graffiti ",
+            "id" : "10",
+            "description" : "old man with a cigaret on a sofa",
+            "type" : "graffiti"
         }
     ]
 }
