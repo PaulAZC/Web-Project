@@ -153,43 +153,28 @@ header nav ul li a:hover:after{
     transform: translateX(20%);
 }
 
-/* Second section */
-#baw_galery{
+/*Second section */
+#galery{
   width: 100%;
-  height: 350vh;
+  height: auto;
+  padding-left: 50px;
   background-color: #f1f1f1;
-  display: block;
 }
 
-#baw_galery h1{
-  font-weight: bold;
-  font-family: 'Work sans', Arial, Helvetica, sans-serif;
-  font-size: 100px;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.baw_container{
+.galery_container{
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
 }
 
-#baw_galery .baw_images_container{
-  overflow: hidden;
+#galery .left_side,.right_side{
+  display: block;
 }
 
-#baw_galery img{
+
+#galery img{
   width: 550px;
-  height: auto;
-  padding: 30px 30px 30px 30px;
-  cursor: pointer;
-}
-
-.tennisman{
-  vertical-align: top;
+  padding: 50px 30px 30px 30px;
 }
 
 /*Footer*/
