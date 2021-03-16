@@ -26,7 +26,7 @@ header{
     padding: 30px 30px 30px 30px;
     background-color: transparent;
     font-size: 1.2em;   
-    transition: all 0.4s ease-in-out;
+    transition: 0.7s ease-in-out;
 }
 
 header nav{
@@ -159,6 +159,7 @@ header nav ul li a:hover:after{
   height: auto;
   padding-left: 50px;
   background-color: #f1f1f1;
+  transition: .7s ease-in-out;
 }
 
 .galery_container{
@@ -171,10 +172,17 @@ header nav ul li a:hover:after{
   display: block;
 }
 
-
 #galery img{
   width: 550px;
   padding: 50px 30px 30px 30px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  transform: scale(1);
+}
+
+#galery img:hover{
+  transition: .5s ease-in-out;
+  transform: scale(1.07);
 }
 
 /*Footer*/
