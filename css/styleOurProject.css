@@ -26,7 +26,8 @@ header{
     padding: 30px 30px 30px 30px;
     background-color: transparent;
     font-size: 1.2em;   
-    transition: 0.7s ease-in-out;
+    transition: 0.3s ease-in-out;
+    transition-delay: 0s;
 }
 
 header nav{
@@ -185,6 +186,16 @@ header nav ul li a:hover:after{
   transform: scale(1.07);
 }
 
+.show-on-scroll{
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.anim-gallery{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*Footer*/
 footer{
     width: 100%;
@@ -277,5 +288,5 @@ footer{
   
   footer .toBulle:hover{
     background-color: #F24130;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
