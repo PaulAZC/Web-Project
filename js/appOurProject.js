@@ -3,6 +3,23 @@ let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
 const galery = document.getElementById('galery');
 
+// //Transition animation
+// const wipe = document.querySelector('.wipe-transition');
+// const TL = new TimelineMax();
+
+// barba.init({
+//     sync : true,
+//     transitions : [{
+//         async leave(){
+//             const done = this.async();
+//             TL.to(wipe, {left: '0%', ease:'power2.out', duration:'1'});
+//         },
+//     enter(){
+//         TL.to(wipe, {left: '100%', ease:'power2.out', duration:'1'});
+//     }
+//     }]
+// });
+
 //Animation with the scroll
 window.addEventListener('scroll', ()=>{
     var bgMove = 50+(window.scrollY/30);
@@ -43,8 +60,6 @@ window.addEventListener('scroll', ()=>{
 //Importation of the galery with JSON
 document.addEventListener('DOMContentLoaded', function() {
     var gallery = document.getElementById('galery_container');
-    var backgroundBlur = document.getElementById('galery');
-    var images_galery;
 
     var left_side = document.createElement("div");
     left_side.setAttribute('class','left_side');

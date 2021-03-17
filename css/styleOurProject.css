@@ -16,6 +16,15 @@ body{
     font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
 }
 
+/* Transitions */
+.wipe-transition{
+  width: 100vw;
+  height: 100vh;
+  background: #EAF205;
+  position: absolute;
+  left: -110%;
+}
+
 /* Header */
 header{
     position: fixed;
@@ -186,6 +195,7 @@ header nav ul li a:hover:after{
   transform: scale(1.07);
 }
 
+/* Observer function */
 .show-on-scroll{
   opacity: 0;
   transition: 1s ease-in-out;
