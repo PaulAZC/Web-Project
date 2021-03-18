@@ -259,6 +259,12 @@ header nav ul li a:hover:after{
   height: 170px;
 }
 
+#thirdSection .firstText, .secondText{
+  white-space: nowrap;
+  font-size: 170px;
+  animation: scrollText linear 25s infinite;
+}
+
 @keyframes scrollText{
   0%{
     transform: translate(0%,0);
@@ -266,12 +272,6 @@ header nav ul li a:hover:after{
   100%{
     transform: translate(-100%, 0);
   }
-}
-
-#thirdSection .firstText, .secondText{
-  white-space: nowrap;
-  font-size: 170px;
-  animation: scrollText linear 25s infinite;
 }
 
 #thirdSection .h2Container{

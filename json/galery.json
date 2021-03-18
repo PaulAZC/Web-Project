@@ -1,0 +1,73 @@
+[  
+        {
+            "name" : "Old man",
+            "id" : "1",
+            "description" : "old man with a cigaret on a sofa",
+            "type" : "portrait",
+            "url" : "galery/baw_old_men.jpg"
+        },
+        {
+            "name" : "Restaurant place",
+            "id" : "2",
+            "description" : "little place that looks like a restaurant",
+            "type" : "street photography",
+            "url" : "galery/baw_place.jpg"
+        },
+        {
+            "name" : "Tennisman",
+            "id" : "3",
+            "description" : "tennisman who is playing with intrusive spectator",
+            "type" : "landscape",
+            "url" : "galery/baw_tennis.jpg"
+        },
+        {
+            "name" : "The girl",
+            "id" : "4",
+            "description" : "girl with a dark glance",
+            "type" : "portrait",
+            "url" : "galery/baw_girl.jpg"
+
+        },
+        {
+            "name" : "Pompidou place",
+            "id" : "5",
+            "description" : "place of the center pompidou",
+            "type" : "landscape",
+            "url" : "galery/baw_pompidou.jpg"
+        },
+        {
+            "name" : "Asian monument",
+            "id" : "6",
+            "description" : "asian girl behind a monument",
+            "type" : "landscape",
+            "url" : "galery/color_asian.jpg"
+        },
+        {
+            "name" : "Rubics mans",
+            "id" : "7",
+            "description" : "graffiti on a wall which represent 2 mans with rubics cube's faces",
+            "type" : "graffiti",
+            "url" : "galery/color_cube.jpg"
+        },
+        {
+            "name" : "Street restaurant",
+            "id" : "8",
+            "description" : "street place behind a restaurant",
+            "type" : "landscape",
+            "url" : "galery/color_street_restaurant.jpg"
+        },
+        {
+            "name" : "Architecture",
+            "id" : "9",
+            "description" : "architecture of a building",
+            "type" : "landscape",
+            "url" : "galery/color_archi.jpg"
+        },
+        {
+            "name" : "Graffiti ",
+            "id" : "10",
+            "description" : "old man with a cigaret on a sofa",
+            "type" : "graffiti",
+            "url" : "galery/color_street_graph.jpg"
+        }
+]
