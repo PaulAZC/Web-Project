@@ -184,7 +184,7 @@ header nav ul li a:hover:after{
 
 #galery img{
   width: 550px;
-  padding: 50px 30px 30px 30px;
+  padding: 50px 30px 20px 30px;
   cursor: pointer;
   transition: .5s ease-in-out;
   transform: scale(1);
@@ -192,7 +192,18 @@ header nav ul li a:hover:after{
 
 #galery img:hover{
   transition: .5s ease-in-out;
-  transform: scale(1.07);
+  transform: scale(1.04);
+}
+
+#galery a{
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.image_caption{
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 1em;
 }
 
 /* Observer function */
