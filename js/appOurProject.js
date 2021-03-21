@@ -2,7 +2,6 @@ const bgFS = document.getElementById('ourPFirstS');
 let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
 const galery = document.getElementById('galery');
-let caption = document.querySelectorAll('#galery a');
 
 // //Transition animation
 // const wipe = document.querySelector('.wipe-transition');

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Web project</title>
-    <link rel="stylesheet" type="text/css" href="css/styleHome.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our project</title>
+    <link rel="stylesheet" type="text/css" href="css/styleShop.css" />
     <!-- Roboto mono font for paragraphe and nav-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <!-- Work sans font for titles -->
@@ -15,7 +14,7 @@
 
 <body data-barba="wrapper">
     <div class="wipe-transition"></div>
-    <main data-barba="container" data-barba-namespace="ourProject">
+    <main data-barba="container" data-barba-namespace="ourProject"></main>
         <header>
             <nav>
                     <div id="navigation">
@@ -34,51 +33,17 @@
                     </div>
             </nav>
         </header>
-        <section id="firstSection" class="section1">
-                <h1 id="titleFirstSection">Lorem ipsum dolor sit.</h1>
-                <button class="discoverBtn">Discover</button>
+
+        <section id="carousel">
         </section>
-        <section id="secondSection">
-            <article class="codingInfo">
-                <img src="images/coding.jpg" alt="person that is coding on his computer" class="imgCoding"/>
-                <h2 class="textCoding">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Fuga iste sapiente minima voluptate eligendi impedit non quas eos voluptatem, recusandae 
-                    dolor magnam cupiditate, modi eaque, nemo sequi perferendis cumque fugit.
-                </h2>      
-                <a href="#"><i class="fas fa-arrow-circle-left"></i></a>
-            </article>
-            <article class="teachingInfo">
-                <img src="images/teaching.jpg" alt="different persons that are in a course" class="imgTeaching"/>
-                <h2 class="textTeaching">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Fuga iste sapiente minima voluptate eligendi impedit non quas eos voluptatem, recusandae 
-                    dolor magnam cupiditate, modi eaque, nemo sequi perferendis cumque fugit.
-                </h2>
-                <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
-            </article>
-        </section>
-        <section id="thirdSection">
-            <article>
-                <div class="textContainer">
-                    <span class="firstText">- WEB DESIGN - PHOTOGRAPHY - AUDIT - DEVELOPMENT - TEACHING&nbsp;</span>
-                    <span class="secondText">- WEB DESIGN - PHOTOGRAPHY - AUDIT - DEVELOPMENT - TEACHING&nbsp;</span>
-                </div>
-                <video width="100%" height="100%" playsinline autoplay muted loop>
-                    <source src="videos/computerHome.mp4" type="video/mp4">
-                </video>
-                <div class="h2Container">
-                    <div class="word"><h2>CREATE YOUR OWN DESIGN</h2></div>
-                </div>
-            </article>
-        </section>
+
         <footer>
             <div id="otherInformation">
                 <div id="ourServices" class="info">
                     <h1>Our Services</h1>
                     <ul class="serviceList">
                         <li><a href="#">Web design</a></li>
-                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
                         <li><a href="#">Audit</a></li>
                         <li><a href="#">Development</a></li>
                         <li><a href="#">Teaching</a></li>
@@ -121,8 +86,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <!-- Jquery library -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/appHome.js"></script>
     <!-- Icon site : fontawesome -->
     <script src="https://kit.fontawesome.com/e3f1815a88.js" crossorigin="anonymous"></script>
+    <!-- GSAP for animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 </body>
 </html>
