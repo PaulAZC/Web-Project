@@ -13,8 +13,7 @@
 </head>
 
 <body data-barba="wrapper">
-    <div class="wipe-transition"></div>
-    <main data-barba="container" data-barba-namespace="ourProject"></main>
+    <main data-barba="container" data-barba-namespace="ourProject">
         <header>
             <nav>
                     <div id="navigation">
@@ -34,7 +33,62 @@
             </nav>
         </header>
 
-        <section id="carousel">
+
+        <section id="carousel_title">
+            <h1>Take a look on our shop</h1>
+            <a href="#carousel"><i class="fas fa-angle-double-down"></i></a>
+        </section>
+        <section id="carousel_shop">
+            <div class="carousel_container" id="carousel">
+                <div class="slide fade">
+                    <div class="card">
+                        <img src="/carousel_illustration/web_design.svg" alt="description" />
+                        <h2>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                        </h2>
+                        <h1>2000£</h2>
+                        <button>Command</button>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="card">
+                        <img src="/carousel_illustration/photography.svg" alt="description" />
+                        <h2>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                        </h2>
+                        <h1>500£</h2>
+                        <button>Command</button>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="card">
+                        <img src="/carousel_illustration/coding.svg" alt="description" />
+                        <h2>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                        </h2>
+                        <h1>1000£</h2>
+                        <button>Command</button>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="card">
+                        <img src="/carousel_illustration/teaching.svg" alt="description" />
+                        <h2>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                        </h2>
+                        <h1>1000£</h2>
+                        <button>Command</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer>
@@ -43,7 +97,7 @@
                     <h1>Our Services</h1>
                     <ul class="serviceList">
                         <li><a href="#">Web design</a></li>
-                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">Photography</a></li>
                         <li><a href="#">Audit</a></li>
                         <li><a href="#">Development</a></li>
                         <li><a href="#">Teaching</a></li>
@@ -77,6 +131,8 @@
         </footer>
     </main>
 
+
+    <script src="/js/appShop.js"></script>
     <!-- Time line link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <!-- Tipewriter function -->
