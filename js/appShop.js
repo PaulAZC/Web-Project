@@ -3,8 +3,6 @@ let fontHeader = document.querySelectorAll('header a');
 
 //Animation with the scroll
 window.addEventListener('scroll', ()=>{
-    console.log(window.scrollY);
-
     if(window.scrollY<152){
         header.style.setProperty("--main-bg-color", '#f1f1f1');
         header.style.backgroundColor = "transparent";
@@ -21,3 +19,15 @@ window.addEventListener('scroll', ()=>{
         }
     }
 });
+
+// JavaScript Document
+$(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
+

@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our project</title>
+    <title>Shop</title>
     <link rel="stylesheet" type="text/css" href="css/styleShop.css" />
     <!-- Roboto mono font for paragraphe and nav-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <!-- Work sans font for titles -->
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <!-- Carousel -->
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css"/>
+    <!--Jquery-->
+    <script type="text/javascript" src="/js/JQuery3.3.1.js"></script>
+    <script type="text/javascript" src="/js/lightslider.js"></script>
 </head>
 
 <body data-barba="wrapper">
@@ -36,59 +41,92 @@
 
         <section id="carousel_title">
             <h1>Take a look on our shop</h1>
-            <a href="#carousel"><i class="fas fa-angle-double-down"></i></a>
+            <a href="#carousel_shop"><i class="fas fa-angle-double-down"></i></a>
         </section>
+
         <section id="carousel_shop">
-            <div class="carousel_container" id="carousel">
-                <div class="slide fade">
-                    <div class="card">
-                        <img src="/carousel_illustration/web_design.svg" alt="description" />
-                        <h2>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
-                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
-                        </h2>
-                        <h1>2000£</h2>
-                        <button>Command</button>
-                    </div>
+            <div class="container">
+            <!--slider------------------->
+            <ul id="autoWidth" class="cs-hidden">
+              <!--1------------------------------>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/web_design.svg" alt="description" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>2000£</h2>
+                  <button>Command</button>
+                </div>		
+              </li>
+              <!--2------------------------------>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/photography.svg" alt="description" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>500£</h2>
+                  <button>Command</button>
                 </div>
-                <div class="slide fade">
-                    <div class="card">
-                        <img src="/carousel_illustration/photography.svg" alt="description" />
-                        <h2>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
-                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
-                        </h2>
-                        <h1>500£</h2>
-                        <button>Command</button>
-                    </div>
+              </li>
+              <!--3------------------------------>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/coding.svg" alt="description" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>1000£</h2>
+                  <button>Command</button>
                 </div>
-                <div class="slide fade">
-                    <div class="card">
-                        <img src="/carousel_illustration/coding.svg" alt="description" />
-                        <h2>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
-                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
-                        </h2>
-                        <h1>1000£</h2>
-                        <button>Command</button>
-                    </div>
+              </li>
+              <!--4------------------------------>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/teaching.svg" alt="description" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>1000£</h2>
+                  <button>Command</button>
                 </div>
-                <div class="slide fade">
-                    <div class="card">
-                        <img src="/carousel_illustration/teaching.svg" alt="description" />
-                        <h2>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
-                            quibusdam distinctio eum asperiores consectetur unde reprehenderit?
-                        </h2>
-                        <h1>1000£</h2>
-                        <button>Command</button>
-                    </div>
+              </li>
+              <!--5------------------------------>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/audit.svg" alt="description" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>1000£</h2>
+                  <button>Command</button>
                 </div>
-            </div>
+              </li>
+              <!--6------------------------------>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/business.svg" alt="description" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>250£</h2>
+                  <button>Command</button>
+                </div>
+              </li>
+            </ul>
         </section>
 
         <footer>
@@ -131,20 +169,8 @@
         </footer>
     </main>
 
-
     <script src="/js/appShop.js"></script>
-    <!-- Time line link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <!-- Tipewriter function -->
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <!-- Barba for pages transitions -->
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-    <!-- Jquery library -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- Icon site : fontawesome -->
     <script src="https://kit.fontawesome.com/e3f1815a88.js" crossorigin="anonymous"></script>
-    <!-- GSAP for animation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 </body>
 </html>
