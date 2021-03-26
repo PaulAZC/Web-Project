@@ -1,0 +1,44 @@
+[
+    {
+        "name" : "Illustration Web design",
+        "alt" : "Card with a man that product a web design",
+        "url" : "carousel_illustration/web_design.svg",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?",
+        "price" : "2000£"
+    },
+    {
+        "name" : "Illustration Photography",
+        "alt" : "Card with a man that take a photo",
+        "url" : "carousel_illustration/photography.svg",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?",
+        "price" : "500£"
+    },
+    {
+        "name" : "Illustration Coding",
+        "alt" : "Card with a man that programming something",
+        "url" : "carousel_illustration/coding.svg",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?",
+        "price" : "1000£"
+    },
+    {
+        "name" : "Illustration Teaching",
+        "alt" : "Card with a man that teach something on a board",
+        "url" : "carousel_illustration/teaching.svg",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?",
+        "price" : "1000£"
+    },
+    {
+        "name" : "Illustration Audit",
+        "alt" : "Card with two persons that valid something",
+        "url" : "carousel_illustration/audit.svg",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?",
+        "price" : "1000£"
+    },
+    {
+        "name" : "Illustration Business",
+        "alt" : "Card with a man with a house that significate business",
+        "url" : "carousel_illustration/business.svg",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?",
+        "price" : "250£"
+    }
+]
