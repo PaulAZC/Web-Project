@@ -1,0 +1,258 @@
+/* Using color : #EAF205 #0D0D0D #EEF26B #8C765A #F24130 */
+
+/* Header */
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+  }
+  
+  header{
+    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+    width: 100%;
+    font-weight: bold;
+    padding: 30px 30px 30px 30px;
+    background-color: #8435F2;
+    font-size: 1.2em;   
+    transition: all 0.4s ease-in-out;
+  }
+  
+  header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  header nav ul{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  header nav ul li{
+    list-style: none;
+    padding-right: 20px;
+  }
+  
+  header nav ul li a{
+    color: #f1f1f1;
+    text-decoration: none;
+    font: bold;
+    position: relative;
+    letter-spacing: 0.05em;
+  }
+  
+  :root{
+  --main-bg-color : #f1f1f1;
+  }
+  
+  header nav ul li a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  
+  .anim-header{
+  background-color: #EAF205;
+  }
+  
+  header nav ul li a:hover:after{
+    width: 100%; 
+    left: 0; 
+  }
+
+  /* Contact Form */
+  #formular_contact{
+      width: 100%;
+      height: 110vh;
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  #formular_contact h1{
+    padding-top: 20px;
+    font-family: 'Work sans', Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    color: #8435F2;
+    text-align: center;
+    margin-left: 50px;
+}
+
+  .required{
+    color: red;
+  }
+
+  label{
+    padding-bottom: 5px;
+  }
+
+  .selection{
+    display: flex;
+  }
+
+  .input_name{
+    margin-right: 10px;
+  }
+
+  form{
+    width: 80%;
+    height: 90%;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input, textarea, select{
+    height: 30px;
+    border-radius: 5px;
+    border: 1.5px solid #8435F2;
+  }
+
+  textarea{
+    resize: none;
+    width: auto;
+    height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .myForm{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .submit{
+    width: 150px;
+    height: 40px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #8435F2;
+    background-color: #8435F2;
+    color: #f1f1f1;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .submit:hover{
+    background-color: #f1f1f1;
+    color: #8435F2;
+  }
+
+  /* Footer */
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: #8435F2;
+  font-family: 'Roboto mono', Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+}
+
+footer h1{
+  color: #f1f1f1;
+  font-size: 20px;
+  padding-bottom: 5px;
+  font-family: 'Work sans', Arial, Helvetica, sans-serif;
+}
+
+footer #otherInformation li,p{
+  color: #f1f1f1;
+  font-size: 13px;
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+footer #otherInformation a{
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+footer #otherInformation{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+footer #companyDescription{
+  width: 450px;
+  height: auto;
+}
+
+footer .info{
+  padding-left: 200px;
+}
+
+footer .media{
+  width: 40px;
+  height: 40px;
+}
+
+footer #socialList{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .toBulle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background: #8435F2;
+  cursor: pointer;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.anim-media{
+  animation: mediaSlide 1s;
+}
+
+@keyframes mediaSlide{
+  from{
+      right: 740px;
+  }
+  to{
+      right: 0%;
+  }
+}
+
+footer h2{
+  color: #f1f1f1;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .toBulle:hover{
+  background-color: #f1f1f1;
+  transition: all 0.3s ease-in-out;
+}
+

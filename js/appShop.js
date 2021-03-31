@@ -22,48 +22,10 @@ window.addEventListener('scroll', ()=>{
 
 //Load the carousel with JSON
 document.addEventListener('DOMContentLoaded', ()=>{
-    var carousel_shop = document.getElementById('carousel_shop');
-
-    var carousel = document.createElement('div');
-    carousel.setAttribute('class', 'carousel');
-
-    var listForQuery = document.createElement('ul');
-    listForQuery.setAttribute('id', 'autoWidth');
-    listForQuery.setAttribute('class', 'cs-hidden');
-
     fetch("/json/carousel_shop.json").then(function(el){
         el.json().then(function(json){
             for(let i=0; i<json.length; i++){
-                var list = document.createElement('li');
-                list.setAttribute('class', 'item-a');
-
-                var card = document.createElement('div');
-                card.setAttribute('class', 'card');
-
-                var illustration = document.createElement('img');
-                illustration.setAttribute('src', json[i].url);
-                illustration.setAttribute('alt', json[i].alt);
-
-                var description = document.createElement('h2');
-                description.textContent = json[i].description;
-
-                var price = document.createElement('h1');
-                price.textContent = json[i].price;
-
-                var command = document.createElement('button');
-                command.textContent = "Command";
-
-                card.appendChild(illustration);
-                card.appendChild(description);
-                card.appendChild(price);
-                card.appendChild(command);
-
-                list.appendChild(card);
-
-                listForQuery.appendChild(list);
             }
-            carousel.appendChild(listForQuery);
-            carousel_shop.appendChild(carousel);
         });
     });
 });

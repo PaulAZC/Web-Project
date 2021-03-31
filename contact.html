@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Web project</title>
-    <link rel="stylesheet" type="text/css" href="css/styleHome.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/styleContact.css" />
     <!-- Roboto mono font for paragraphe and nav-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <!-- Work sans font for titles -->
@@ -14,7 +13,6 @@
 </head>
 
 <body data-barba="wrapper">
-    <div class="wipe-transition"></div>
     <main data-barba="container" data-barba-namespace="ourProject">
         <header>
             <nav>
@@ -23,7 +21,7 @@
                             <li><a href="home.html">Home</a></li>
                             <li><a href="ourProject.html">Our project</a></li>
                             <li><a href="shop.html">Shop</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                     <div id="connexion">
@@ -34,44 +32,40 @@
                     </div>
             </nav>
         </header>
-        <section id="firstSection" class="section1">
-                <h1 id="titleFirstSection">Lorem ipsum dolor sit.</h1>
-                <button onclick="window.location.href = 'ourProject.html'" class="discoverBtn">Discover</button>
-        </section>
-        <section id="secondSection">
-            <article class="codingInfo">
-                <img src="images/coding.jpg" alt="person that is coding on his computer" class="imgCoding"/>
-                <h2 class="textCoding">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Fuga iste sapiente minima voluptate eligendi impedit non quas eos voluptatem, recusandae 
-                    dolor magnam cupiditate, modi eaque, nemo sequi perferendis cumque fugit.
-                </h2>      
-                <a href="#"><i class="fas fa-arrow-circle-left"></i></a>
-            </article>
-            <article class="teachingInfo">
-                <img src="images/teaching.jpg" alt="different persons that are in a course" class="imgTeaching"/>
-                <h2 class="textTeaching">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Fuga iste sapiente minima voluptate eligendi impedit non quas eos voluptatem, recusandae 
-                    dolor magnam cupiditate, modi eaque, nemo sequi perferendis cumque fugit.
-                </h2>
-                <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
-            </article>
-        </section>
-        <section id="thirdSection">
-            <article>
-                <div class="textContainer">
-                    <span class="firstText">- WEB DESIGN - PHOTOGRAPHY - AUDIT - DEVELOPMENT - TEACHING&nbsp;</span>
-                    <span class="secondText">- WEB DESIGN - PHOTOGRAPHY - AUDIT - DEVELOPMENT - TEACHING&nbsp;</span>
+
+        <!-- Formular to contact (no DB behind for the moment) -->
+        <section id="formular_contact">
+            <h1>Contact us !</h1>
+            <form name="form">
+                <div class="name myForm">
+                    <label>Full name<span class="required">*</span></label>
+                    <div class="selection">
+                        <input type="text" class="input_name augmentation empty" placeholder="First" />
+                        <input type="text" class="input_name augmentation empty" placeholder="Last" />
+                    </div>
                 </div>
-                <video width="100%" height="100%" playsinline autoplay muted loop>
-                    <source src="videos/computerHome.mp4" type="video/mp4">
-                </video>
-                <div class="h2Container">
-                    <div class="word"><h2>CREATE YOUR OWN DESIGN</h2></div>
+                <div class="mail myForm">
+                    <label>E-mail <span class="required">*</span></label>
+                    <input type="text" class="augmentation empty" placeholder="Mail">
                 </div>
-            </article>
+                <div class="function myForm">
+                    <label>Function<span class="required">*</span></label>
+                    <select class="augmentation">
+                        <option>    </option>
+                        <option value="Student">Student</option>
+                        <option value="Enterprise">Enterprise</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="message myForm">
+                    <label>What do you want?<span class="required">*</span></label>
+                    <textarea class="empty" name="your_message" cols="10" rows="5" charswidth="23"></textarea>
+                </div>
+                <input type="submit" class="submit" value="Submit" onclick="return isEmpty()"/>
+            </form>
         </section>
+
         <footer>
             <div id="otherInformation">
                 <div id="ourServices" class="info">
@@ -112,16 +106,7 @@
         </footer>
     </main>
 
-    <!-- Time line link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <!-- Tipewriter function -->
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <!-- Barba for pages transitions -->
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-    <!-- Jquery library -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/appHome.js"></script>
+    <script src="/js/appContact.js"></script>
     <!-- Icon site : fontawesome -->
     <script src="https://kit.fontawesome.com/e3f1815a88.js" crossorigin="anonymous"></script>
 </body>
