@@ -193,15 +193,17 @@ footer #otherInformation{
   display: flex;
   flex-direction: row;
   padding-bottom: 20px;
+  justify-content: space-around;
 }
 
 footer #companyDescription{
-  width: 450px;
+  width: 250px;
   height: auto;
+  text-align: left;
 }
 
-footer .info{
-  padding-left: 200px;
+#companyDescription h1{
+  text-align: left;
 }
 
 footer .media{

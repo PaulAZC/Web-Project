@@ -28,6 +28,14 @@ header{
     transition: all 0.4s ease-in-out;
 }
 
+@media all and (min-width:320px) and (max-width:1280px){
+  header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
 header nav{
     display: flex;
     flex-direction: row;
@@ -79,6 +87,7 @@ header nav ul li a:hover:after{
     left: 0; 
 }
 
+/* First Section */
 #firstSection{
     width: 100%;
     height: 117vh;
@@ -148,6 +157,7 @@ header nav ul li a:hover:after{
   width: 100%;
   height: 170vh;
   background-color: #EAF205;
+  overflow: hidden;
 }
 
 #secondSection h2{
@@ -241,6 +251,13 @@ header nav ul li a:hover:after{
   margin-left: 30px;
 }
 
+/* Third section */
+@media screen and (max-width:768px){
+  #thirdSection .word{
+    font-size: 50px;
+  }
+}
+
 #thirdSection{
   width: 100%;
   height: auto;
@@ -290,6 +307,7 @@ header nav ul li a:hover:after{
   -webkit-background-clip: text;
 }
 
+/*Footer*/
 footer{
   width: 100%;
   height: 300px;
@@ -320,16 +338,18 @@ footer #otherInformation a{
 footer #otherInformation{
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   padding-bottom: 20px;
 }
 
 footer #companyDescription{
-  width: 450px;
+  width: 250px;
   height: auto;
+  text-align: left;
 }
 
-footer .info{
-  padding-left: 200px;
+#companyDescription h1{
+  text-align: left;
 }
 
 footer .media{
