@@ -3,23 +3,6 @@ let header = document.querySelector('header');
 let fontHeader = document.querySelectorAll('header a');
 const galery = document.getElementById('galery');
 
-// //Transition animation
-// const wipe = document.querySelector('.wipe-transition');
-// const TL = new TimelineMax();
-
-// barba.init({
-//     sync : true,
-//     transitions : [{
-//         async leave(){
-//             const done = this.async();
-//             TL.to(wipe, {left: '0%', ease:'power2.out', duration:'1'});
-//         },
-//     enter(){
-//         TL.to(wipe, {left: '100%', ease:'power2.out', duration:'1'});
-//     }
-//     }]
-// });
-
 //Animation with the scroll
 window.addEventListener('scroll', ()=>{
     var bgMove = 50+(window.scrollY/30);
@@ -71,6 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
         el.json().then(function(json){
             for(let i=0; i<json.length; i++){
                 var link = document.createElement('a');
+                var caption = document.createElement('h2');
+
+                caption.textContent = json[i].id + ': ' + json[i].name;
+                caption.setAttribute('class', 'image_caption');
 
                 link.setAttribute('href', json[i].url);
                 link.setAttribute('target', '_blank');
@@ -82,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 images.setAttribute('class', 'image_galery show-on-scroll');
 
                 link.appendChild(images);
+                link.appendChild(caption);
 
                 if(i%2 == 0 || i == 0){
                     left_side.appendChild(link);

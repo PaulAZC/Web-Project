@@ -39,6 +39,12 @@ header{
     transition-delay: 0s;
 }
 
+@media screen and (max-width:768px){
+  header{
+    font-size: 3vmin;
+  } 
+}
+
 header nav{
     display: flex;
     flex-direction: row;
@@ -90,13 +96,11 @@ header nav ul li a:hover:after{
 #ourPFirstS{
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
     height: 100vh; 
     width: 100%;
-    max-width: 1280px;
     background-image: url(../images/backOP.jpg);
-    background-position: 50% 50% ;
+    background-size: cover;
     object-position: center;
     text-align: center;
     display: flex;
@@ -104,6 +108,16 @@ header nav ul li a:hover:after{
     align-items: center;
     justify-content: center;
     color: #f1f1f1;
+}
+
+@media screen and (max-width:1024px){
+  .title h2{
+    font-size: 20vmin;
+  }
+
+  #ourPFirstS p, #ourPFirstS a{
+    font-size: 15vmin;
+  }
 }
 
 #ourPFirstS h2{
@@ -184,7 +198,7 @@ header nav ul li a:hover:after{
 
 #galery img{
   width: 550px;
-  padding: 50px 30px 30px 30px;
+  padding: 50px 30px 20px 30px;
   cursor: pointer;
   transition: .5s ease-in-out;
   transform: scale(1);
@@ -192,7 +206,27 @@ header nav ul li a:hover:after{
 
 #galery img:hover{
   transition: .5s ease-in-out;
-  transform: scale(1.07);
+  transform: scale(1.04);
+}
+
+#galery a{
+  text-decoration: none;
+  color:#f1f1f1;
+}
+
+.image_caption{
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 2em;
+}
+
+@media screen and (max-width:768px){
+  #galery_container img{
+    width: 100%;
+  }
+  .image_caption{
+    font-size: 3vmin;
+  }
 }
 
 /* Observer function */
@@ -238,15 +272,17 @@ footer{
     display: flex;
     flex-direction: row;
     padding-bottom: 20px;
+    justify-content: space-around;
   }
   
   footer #companyDescription{
-    width: 450px;
+    width: 250px;
     height: auto;
+    text-align: left;
   }
   
-  footer .info{
-    padding-left: 200px;
+  #companyDescription h1{
+    text-align: left;
   }
   
   footer .media{
@@ -299,4 +335,20 @@ footer{
   footer .toBulle:hover{
     background-color: #F24130;
     transition: all 0.7s ease-in-out;
+  }
+
+  @media screen and (max-width:768px){
+    footer h1{
+      font-size: 4vmin;
+    }
+    
+    footer #otherInformation li,p{
+      font-size: 2vmin;
+    }
+  
+    footer #companyDescription{
+      width: 30vmin;
+      height: auto;
+      text-align: left;
+    }
   }

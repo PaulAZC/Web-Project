@@ -28,6 +28,12 @@ header{
     transition: all 0.4s ease-in-out;
 }
 
+@media screen and (max-width:768px){
+  header{
+    font-size: 3vmin;
+  } 
+}
+
 header nav{
     display: flex;
     flex-direction: row;
@@ -79,6 +85,7 @@ header nav ul li a:hover:after{
     left: 0; 
 }
 
+/* First Section */
 #firstSection{
     width: 100%;
     height: 117vh;
@@ -115,7 +122,10 @@ header nav ul li a:hover:after{
     width: 200px;
     cursor: pointer;
     position: absolute;
-    right: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     top: 610px;
 }
 
@@ -144,10 +154,12 @@ header nav ul li a:hover:after{
     top: 250px;
 }
 
+/* Second section */ 
 #secondSection{
   width: 100%;
   height: 170vh;
   background-color: #EAF205;
+  overflow: hidden;
 }
 
 #secondSection h2{
@@ -225,6 +237,47 @@ header nav ul li a:hover:after{
   }
 }
 
+@media screen and (max-width:768px){
+  @keyframes imgCoding{
+    from{
+      transform: translateX(100%);
+    }
+    to{
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes textCoding{
+    from{
+      transform: translateX(-100%);
+    }
+    to{
+      transform: translateX(0px);
+    }
+  }
+
+  #secondSection h2{
+    font-size: 3vmin;
+  }
+
+  #secondSection img{
+    width: 200px;
+    height: 100px;
+  }
+
+  #secondSection .codingInfo i{
+    font-size: 10vmin;
+  }
+  
+  #secondSection .teachingInfo i{
+    font-size: 10vmin;
+  }
+
+  .codingInfo{
+    margin-bottom: 50px;
+  }
+}
+
 #secondSection .teachingInfo h2{
   margin-left: 50px;
   margin-top: 40px;
@@ -239,6 +292,17 @@ header nav ul li a:hover:after{
 
 #secondSection .teachingInfo img{
   margin-left: 30px;
+}
+
+/* Third section */
+@media screen and (max-width:768px){
+  #thirdSection{
+    height: 100vh;
+  }
+
+  #thirdSection .word h2{
+    font-size: 20vmin;
+  }
 }
 
 #thirdSection{
@@ -290,6 +354,7 @@ header nav ul li a:hover:after{
   -webkit-background-clip: text;
 }
 
+/*Footer*/
 footer{
   width: 100%;
   height: 300px;
@@ -320,16 +385,18 @@ footer #otherInformation a{
 footer #otherInformation{
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   padding-bottom: 20px;
 }
 
 footer #companyDescription{
-  width: 450px;
+  width: 250px;
   height: auto;
+  text-align: left;
 }
 
-footer .info{
-  padding-left: 200px;
+#companyDescription h1{
+  text-align: left;
 }
 
 footer .media{
@@ -382,5 +449,21 @@ footer h2{
 footer .toBulle:hover{
   background-color: #F24130;
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width:768px){
+  footer h1{
+    font-size: 4vmin;
+  }
+  
+  footer #otherInformation li,p{
+    font-size: 2vmin;
+  }
+
+  footer #companyDescription{
+    width: 30vmin;
+    height: auto;
+    text-align: left;
+  }
 }
 

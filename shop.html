@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="css/styleShop.css" />
+    <!-- Roboto mono font for paragraphe and nav-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" type="text/css" rel="stylesheet">
+    <!-- Work sans font for titles -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" type="text/css" rel="stylesheet">
+    <!-- Carousel -->
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css"/>
+    <!--Jquery-->
+    <script type="text/javascript" src="/js/JQuery3.3.1.js"></script>
+    <script type="text/javascript" src="/js/lightslider.js"></script>
+</head>
+
+<body data-barba="wrapper">
+    <main data-barba="container" data-barba-namespace="ourProject">
+        <header>
+            <nav>
+                    <div id="navigation">
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="ourProject.html">Our project</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div id="connexion">
+                        <ul>
+                            <li><a href="#">Sign up</a></li>
+                            <li><a href="#">Sign in</a></li>
+                        </ul>
+                    </div>
+            </nav>
+        </header>
+
+
+        <section id="carousel_title">
+            <h1>Take a look on our shop</h1>
+            <a href="#carousel_shop"><i class="fas fa-angle-double-down"></i></a>
+        </section>
+
+        <!-- Carousel with JSON -->
+        <section id="carousel_json">
+        </section>
+
+        <!-- Carousel whithout JSON -->
+        <section id="carousel_shop">
+            <div class="container">
+            <ul id="autoWidth" class="cs-hidden">
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/web_design.svg" alt="Card with a man that product a web design" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>2000£</h2>
+                  <button>Command</button>
+                </div>		
+              </li>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/photography.svg" alt="Card with a man that take a photo" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>500£</h2>
+                  <button>Command</button>
+                </div>
+              </li>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/coding.svg" alt="Card with a man that programming something" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>1000£</h2>
+                  <button>Command</button>
+                </div>
+              </li>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/teaching.svg" alt="Card with a man that teach something on a board" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>1000£</h2>
+                  <button>Command</button>
+                </div>
+              </li>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/audit.svg" alt="Card with two persons that valid something" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>1000£</h2>
+                  <button>Command</button>
+                </div>
+              </li>
+              <li class="item-a">
+                <div class="card">
+                  <img src="/carousel_illustration/business.svg" alt="Card with a man with a house that significate business" />
+                  <h2>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                      Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, 
+                      quibusdam distinctio eum asperiores consectetur unde reprehenderit?
+                  </h2>
+                  <h1>250£</h2>
+                  <button>Command</button>
+                </div>
+              </li>
+            </ul>
+        </section>
+
+        <footer>
+            <div id="otherInformation">
+                <div id="ourServices" class="info">
+                    <h1>Our Services</h1>
+                    <ul class="serviceList">
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Audit</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Teaching</a></li>
+                    </ul>
+                </div>
+                <div id="aboutUs" class="info">
+                    <h1>About</h1>
+                    <ul class="aboutList">
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div id="companyDescription" class="info">
+                    <h1>Web Company</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Fugit vero autem eum sint magnam provident laudantium rerum tempora repudiandae debitis. 
+                        Animi, modi. Accusantium est obcaecati sequi autem doloremque ratione suscipit?
+                    </p>
+                </div>
+            </div>
+            <div id="maListe">
+                <ul id="socialList" class="socialList">
+                    <li class="toBulle"><a href="https://www.facebook.com/" target="_blank"><img src="images/fb.svg" alt="facebook" class="media"></a></li>
+                    <li class="toBulle"><a href="https://www.instagram.com/" target="_blank"><img src="images/insta.svg" alt="insta" class="media"></a></li>
+                    <li class="toBulle"><a href="https://www.youtube.com/" target="_blank"><img src="images/yt.svg" alt="youtube" class="media"></a></li>
+                    <li class="toBulle"><a href="https://github.com/PaulAZC" target="_blank"><img src="images/github.svg" alt="github" class="media"></a></li>
+                </ul>
+            </div>
+            <h2 class="copyright">Web Compagny © 2021 </h2>
+        </footer>
+    </main>
+
+    <script src="/js/appShop.js"></script>
+    <!-- Icon site : fontawesome -->
+    <script src="https://kit.fontawesome.com/e3f1815a88.js" crossorigin="anonymous"></script>
+</body>
+</html>
