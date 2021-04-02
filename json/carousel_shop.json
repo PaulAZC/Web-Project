@@ -1,0 +1,37 @@
+[
+    {
+        "name" : "Web design",
+        "alt" : "Card with a man that product a web design",
+        "url" : "carousel_illustration/web_design.svg",
+        "id" : "1",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?"
+    },
+    {
+        "name" : "Photography",
+        "alt" : "Card with a man that take a photo",
+        "url" : "carousel_illustration/photography.svg",
+        "id" : "2",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?"
+    },
+    {
+        "name" : "Coding",
+        "alt" : "Card with a man that programming something",
+        "url" : "carousel_illustration/coding.svg",
+        "id" : "3",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?"
+    },
+    {
+        "name" : "Teaching",
+        "alt" : "Card with a man that teach something on a board",
+        "url" : "carousel_illustration/teaching.svg",
+        "id" : "4",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?"
+    },
+    {
+        "name" : "Audit",
+        "alt" : "Card with two persons that valid something",
+        "url" : "carousel_illustration/audit.svg",
+        "id" : "5",
+        "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corrupti tenetur facere tempora quae. Maiores, sint omnis repudiandae ipsam, sapiente iste placeat nihil, quibusdam distinctio eum asperiores consectetur unde reprehenderit?"
+    }
+]
