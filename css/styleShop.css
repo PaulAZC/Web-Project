@@ -29,6 +29,12 @@ header{
   transition: all 0.4s ease-in-out;
 }
 
+@media screen and (max-width:768px){
+  header{
+    font-size: 3vmin;
+  } 
+}
+
 header nav{
   display: flex;
   flex-direction: row;
@@ -80,68 +86,6 @@ header nav ul li a:hover:after{
   left: 0; 
 }
 
-/* Carousel JSON*/
-#carousel_json{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-    position: relative;
-}
-
-.carousel{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 520px;
-  overflow: hidden;
-  position: relative;
-  }
-
-.prev{
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-
-.prev:hover{
-  transform: translateX(-30%);
-}
-
-.next{
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-
-.next:hover{
-  transform: translateX(30%);
-}
-
-.next, .prev{
-  font-size: 2em;
-}
-
-.item{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.carousel img{
-  width: 500px;
-  height: 300px;
-}
-
-.carousel h2{
-  position: relative;
-  bottom: 5px;
-  color: #0d0d0d;
-}
-
 /* Carousel titel */
 #carousel_title{
   background: url(/images/backShop.jpg);
@@ -160,6 +104,13 @@ header nav ul li a:hover:after{
   font-family: "Work sans", Arial, Helvetica, sans-serif;
   font-size: 60px;
   animation: apparition-title 2s;
+}
+
+@media screen and (max-width:768px){
+  #carousel_title h1{
+    font-size: 10vmin;
+    text-align: center;
+  }
 }
 
 @keyframes apparition-title{
@@ -186,11 +137,78 @@ header nav ul li a:hover:after{
     transform: translateY(0%);
   }
   50%{
-    transform: translateY(50%);
+    transform: ranslateY(50%);
   }
   100%{
     transform: translateY(0%);
   }
+}
+
+/* Carousel JSON */
+#carousel_json{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+    position: relative;
+}
+
+.carousel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+.prev{
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.prev:hover{
+  transform: translateX(-30%);
+}
+
+.next{
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.next:hover{
+  transform: translateX(30%);
+}
+
+.next, .prev{
+  font-size: 2em;
+}
+
+.toMove{
+  transition: 1s ease-in-out;
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel img{
+  width: 700px;
+  height: 400px;
+}
+
+
+.carousel h2{
+  position: relative;
+  bottom: 5px;
+  color: #0d0d0d;
 }
 
 /* Carousel */
@@ -366,3 +384,18 @@ footer .toBulle:hover{
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width:768px){
+  footer h1{
+    font-size: 4vmin;
+  }
+  
+  footer #otherInformation li,p{
+    font-size: 2vmin;
+  }
+
+  footer #companyDescription{
+    width: 30vmin;
+    height: auto;
+    text-align: left;
+  }
+}

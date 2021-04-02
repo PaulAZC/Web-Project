@@ -39,6 +39,12 @@ header{
     transition-delay: 0s;
 }
 
+@media screen and (max-width:768px){
+  header{
+    font-size: 3vmin;
+  } 
+}
+
 header nav{
     display: flex;
     flex-direction: row;
@@ -95,7 +101,6 @@ header nav ul li a:hover:after{
     width: 100%;
     background-image: url(../images/backOP.jpg);
     background-size: cover;
-    background-position: 50% 50% ;
     object-position: center;
     text-align: center;
     display: flex;
@@ -103,6 +108,16 @@ header nav ul li a:hover:after{
     align-items: center;
     justify-content: center;
     color: #f1f1f1;
+}
+
+@media screen and (max-width:1024px){
+  .title h2{
+    font-size: 20vmin;
+  }
+
+  #ourPFirstS p, #ourPFirstS a{
+    font-size: 15vmin;
+  }
 }
 
 #ourPFirstS h2{
@@ -203,6 +218,15 @@ header nav ul li a:hover:after{
   text-align: center;
   padding-bottom: 30px;
   font-size: 2em;
+}
+
+@media screen and (max-width:768px){
+  #galery_container img{
+    width: 100%;
+  }
+  .image_caption{
+    font-size: 3vmin;
+  }
 }
 
 /* Observer function */
@@ -311,4 +335,20 @@ footer{
   footer .toBulle:hover{
     background-color: #F24130;
     transition: all 0.7s ease-in-out;
+  }
+
+  @media screen and (max-width:768px){
+    footer h1{
+      font-size: 4vmin;
+    }
+    
+    footer #otherInformation li,p{
+      font-size: 2vmin;
+    }
+  
+    footer #companyDescription{
+      width: 30vmin;
+      height: auto;
+      text-align: left;
+    }
   }

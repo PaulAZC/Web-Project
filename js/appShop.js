@@ -21,6 +21,7 @@ window.addEventListener('scroll', ()=>{
 });
 
 //Load the carousel with JSON
+//Inspired from Peter Butcher's code for the loading
 document.addEventListener('DOMContentLoaded', ()=>{
     var carousel_json = document.getElementById('carousel_json');
 
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         el.json().then(function(json){
             for(let i=0; i<json.length; i++){
                 var div_image = document.createElement('div');
-                div_image.setAttribute('class', 'item '+i);
+                div_image.setAttribute('class', 'item toMove');
 
                 var image = document.createElement('img');
                 image.setAttribute('src', json[i].url);
@@ -66,22 +67,44 @@ document.addEventListener('DOMContentLoaded', ()=>{
             setupCarousel(json);
         });
     });
+
+    //Function that anim the carousel (a little with JQUERY)
+    //I prefer to use these images to illustrate my site, 
+    //represent things that we can buy instead of my gallery
+    //(but it is the same code with the 9 other images) 
+    //I realised that from scratch
     function setupCarousel(json){
-        var imageWidth = 500;
+        var size_move = 0;
 
         buttonNext.addEventListener('click', ()=>{
-            for(let i=0; i<json.length; i++){
-                allImages[i].style.transform = 'translateX('+imageWidth+');'
+            size_move-=700;
+            for(let i=0; i<$('.toMove').length; i++){
+                if(size_move<-1400){
+                    size_move = 1400;
+                    $('.toMove')[i].style.transform = "translateX("+size_move+"px)";
+                }else{
+                    $('.toMove')[i].style.transform = "translateX("+size_move+"px)";
+                }
             }
         });
         
         buttonPrev.addEventListener('click', ()=>{
-
+            size_move+=700;
+            console.log(size_move);
+            for(let i=0; i<$('.toMove').length; i++){
+                if(size_move>1400){
+                    size_move = -1400;
+                    $('.toMove')[i].style.transform = "translateX("+size_move+"px)";
+                }else{
+                    $('.toMove')[i].style.transform = "translateX("+size_move+"px)";
+                }
+            }
         });
     };
 });
 
-// JavaScript Document
+//JavaScript Document
+//From : https://github.com/sachinchoolur/lightslider
 $(document).ready(function() {
     $('#autoWidth').lightSlider({
         autoWidth:true,
