@@ -1,5 +1,7 @@
 const bgFS = document.getElementById('ourPFirstS');
 let header = document.querySelector('header');
+let test = document.querySelector('#testestts');
+
 let fontHeader = document.querySelectorAll('header a');
 const galery = document.getElementById('galery');
 
