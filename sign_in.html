@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" type="text/css" href="css/styleSignIn.css" />
+    <!-- Roboto mono font for paragraphe and nav-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" type="text/css" rel="stylesheet">
+    <!-- Work sans font for titles -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+                <div id="navigation">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="ourProject.html">Our project</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="connexion">
+                    <ul>
+                        <li><a href="/sign_up.html">Sign up</a></li>
+                        <li><a href="/sign_in.html">Sign in</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+    <section id="login_section">
+        <div class="connexion">
+            <h1 class="move">Login</h1>
+            <form>
+                <input type="text" class="move" placeholder="E-mail">
+                <input type="text" class="move" placeholder="Password">
+                <input type="submit" class="button" value="Connexion" onclick="return verification();">
+            </form>
+            
+            <p class="move">If you have forget your password, <a href="#">click here</a></p>
+        </div>
+    </section>
+</body>
+</html>
