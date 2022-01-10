@@ -7,7 +7,10 @@
  - **A carousel** from scratch
  - A formular for contact
  
- ## How to run the project : 
+ ## You can access on it with the environment link on github or on this link :
+   ``` https://web-project-abroad.herokuapp.com/ ```
+ 
+ ## How to run the project on your computer : 
  * First, clone the project on your computer :
    ```
    git clone https://github.com/PaulAZC/WebTech_Project.git
