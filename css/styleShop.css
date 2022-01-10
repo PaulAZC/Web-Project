@@ -137,7 +137,7 @@ header nav ul li a:hover:after{
     transform: translateY(0%);
   }
   50%{
-    transform: ranslateY(50%);
+    transform: translateY(50%);
   }
   100%{
     transform: translateY(0%);
